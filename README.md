@@ -1,2 +1,8 @@
 # disgeo-demo-2
 Repository voor het ontwikkelen van de fase 2 demonstrator voor het project Doorontwikkeling in Samenhang. 
+
+In fase 1 hebben we een demonstrator ontwikkeld met als onderwerp 'gebouwen en wegen' die als doel had om te beproeven en aan een breed publiek te laten zien hoe geodata in samenhang kan worden gepubliceerd op het web. Hoe dit is afgelopen is te lezen in de [Lessons Learned](https://docs.geostandaarden.nl/disgeo/dll/). 
+
+In fase 2, waarvoor deze repository is aangemaakt, gaan we een "High 5" sessie uitvoeren. In vijf dagen zetten we met een compact team een opvolger van de eerste demonstrator in elkaar. Doel: laten zien wat linked data voor DisGeo kan betekenen, uitgaande van de wens om datasets binnen en buiten de basisregistraties met elkaar te kunnen combineren en integraal te kunnen bevragen. Dit willen we etaleren en hiermee willen we inspireren. In tegenstelling tot fase 1, waarin we uitgingen van een situatie waarin data via web APIs verkrijgbaar is, hebben we in fase 2 als vertrekpunt het 'ideaalplaatje' dat alle data als linked data beschikbaar is. In een fase 3 kunnen we dan gaan experimenteren met tussenoplossingen om van de huidige situatie naar de ideale eindsituatie te komen.
+
+De High 5 week is exploratief van aard; de taken zijn niet van tevoren uitgewerkt en er is geen vast programma. De uitkomst van deze High 5 is ook zeker niet een doelarchitectuur voor DisGeo. Architectuuroverwegingen en andere lessen die we leren tijdens het ontwikkelen van deze demonstrator zullen we weer uitgebreid documenteren, zodat iedereen er kennis van kan nemen.

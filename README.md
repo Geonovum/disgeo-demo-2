@@ -1,5 +1,5 @@
 # disgeo-demo-2
-Repository voor het ontwikkelen van de fase 2 demonstrator voor het project Doorontwikkeling in Samenhang. 
+Repository voor het ontwikkelen van de fase 2 demonstrator voor het project Doorontwikkeling in Samenhang (DiS Geo). 
 
 In fase 1 hebben we een demonstrator ontwikkeld met als onderwerp 'gebouwen en wegen' die als doel had om te beproeven en aan een breed publiek te laten zien hoe geodata in samenhang kan worden gepubliceerd op het web. Hoe dit is afgelopen is te lezen in de [Lessons Learned](https://docs.geostandaarden.nl/disgeo/dll/). 
 

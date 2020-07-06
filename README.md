@@ -25,11 +25,13 @@ Scholenregister (DUO via KDP: Pano zoekt uit of dit interessant is)
 "water" gerelateerde datasets:
 * GWSW: Rioned
   * https://sparql.gwsw.nl/repositories/TestDatastory is een set van Castricum
+  * GWSW heeft een waardetype in gml met RD geometrieen en een geo:asWKT geometrie in WGS84
 
 * DAMO: https://sparql.gwsw.nl is instance data vanuit West-Brabant, een testset van enkele afvalwatertransportleidingen en een rwzi. Nog erg basaal en klein, als test voor alles wat later dit jaar komen gaat.
 
 Asset/Imbor gegevens:
 * Er is een open dataset van Provincie Noord-Holland beschikbaar in Linked Data van omgeving Castricum/Uitgeest.
+  * Geometrie is gestransformeerd naar een geo:asWKT geometrie in WGS84
   * overlap met de GWSW set op de Zeeweg (N513) kruising met de Heereweg (N512)
   * model: [areaaldata_ontologie](https://provincienh.github.io/OTL/)
   * hele basale mapping naar IMBOR-LD (mapping)[https://github.com/provincieNH/OTL/tree/master/mappings]

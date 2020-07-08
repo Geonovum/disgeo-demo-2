@@ -9,6 +9,6 @@ Er worden tijdens de High 5 linksets gemaakt, bijvoorbeeld tussen scholen uit de
 
 Er is bijvoorbeeld ook een linkset beschikbaar tussen BRK en BAG. Is open, maar nooit gepubliceerd (wel beschikbaar via labs). Maar uris hierin kunnen verouderd zijn want de id's van een van de datasets zijn veranderd. 
 
-Een andere linkset, tussen de BRT en de BAG, wordt wel beheerd.
+Een andere linkset, tussen de BRT en de BAG, wordt wel beheerd. Deze gebruiken we niet in de demonstrator, maar noemen we hier als goed voorbeeld van een koppeling tussen twee datasets waarvan het beheer netjes geregeld is. Als onderdeel van de het up to date houden van de BRT wordt ook gekeken naar de BAG panden. Deze relatie van BRT naar BAG werd vroeger echter weer weggegooid; nu wordt dit doorgespeeld aan het Kadaster data science team dat op basis van deze input de linkset tussen BRT en BAG up to date houdt.
 
-Zie ook [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). 
+Zie ook [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak).  

@@ -9,4 +9,6 @@ Er worden tijdens de High 5 linksets gemaakt, bijvoorbeeld tussen scholen uit de
 
 Er is bijvoorbeeld ook een linkset beschikbaar tussen BRK en BAG. Is open, maar nooit gepubliceerd (wel beschikbaar via labs). Maar uris hierin kunnen verouderd zijn want de id's van een van de datasets zijn veranderd. 
 
+Een andere linkset, tussen de BRT en de BAG, wordt wel beheerd.
+
 Zie ook [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). 

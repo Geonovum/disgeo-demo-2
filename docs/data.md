@@ -6,6 +6,8 @@ Selectiecriteria voor de data:
 - Primaire voorkeur voor productiedata
 - De data moet beschikbaar zijn voor Rotterdam en/of Castricum
 
+Data verzamelen en prepareren is in de weken voorafgaand aan de High 5 grotendeels al gedaan. Om 14:45 op dag 1 van de High 5 is de data die nodig is voor de demonstrator redelijk compleet. 
+
 ## DisGeo data
 Basisregistratie Adressen en Gebouwen (BAG)
 - Productiedata via Kadaster
@@ -28,6 +30,8 @@ Basisregistratie Grootschalige Topografie (BGT)
 
 ## Voor use case Brand 
 Nationale Databank Wegverkeersgegevens (NDW)
+- 125 miljoen triples (Ongeveer de omvang van een gemiddelde basisregistratie). 
+- Is geodata, sensordata
 - Gebied: Rotterdam
 - Inclusief stukje Nationaal Wegenbestand (NWB)
 - Via Kadaster Labs
@@ -48,7 +52,7 @@ Scholenregister
 - Met bijbehorende Linkset-query tussen onderwijsaanbieders en BAG verblijfsobjecten: https://api.triplydb.com/s/l8IruFAHc
 
 Kinderdagverblijven
-- Via ? waarsch PLDN
+- Data beschikbaar via PLDN
 - Met koppeling naar de BAG
 
 Rijksmonumentenregister
@@ -64,6 +68,7 @@ Rioleringsdata
 Beheer openbare ruimte (BOR) data
 - Areaaldata van Provincie Noord-Holland van de trajecten N203 en N513 (Uitgeest, Castricum) 
 - [SPARQL endpoint](https://data.labs.kadaster.nl/disgeo/AreaaldataN203N513/sparql/AreaaldataN203N513)
+- Open en vrij te gebruiken
 
 Kwaliteitsdata rioolwater
 - Laat vervuiling van rioolwater zien met specifieke stoffen

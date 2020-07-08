@@ -21,6 +21,7 @@ En daar mee ook
 ## Resultaten
 
 - [Dit ReSpec document](https://geonovum.github.io/disgeo-demo2)
-- Lab omgeving met data, breed raadpleegbaar [link ontbreekt nog]
+- Github omgeving voor ontwikkeling: https://github.com/Geonovum/disgeo-demo-2
+- Lab omgeving met data, breed raadpleegbaar [Labs.kadaster.nl, data via data.labs.kadaster.nl]
 - Eindpresentatie op dinsdag 14 juli: [Innoveren voor DisGeo](https://www.eventbrite.com/e/innoveren-voor-disgeo-eindpresentatie-innovatiesprint-tickets-111946306416)
 - Communicatie-activiteiten

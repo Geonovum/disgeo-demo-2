@@ -7,7 +7,7 @@ Een High 5 is een soort 5 dagen lange innovatiesprint, waarbij ontwikkelaars sam
 ## Doel
 De DisGeo Demo fase 2 toont wat Linked Data voor DisGeo kan betekenen, en wat de tekortkomingen zijn. De nadruk ligt daarbij op integrale gebruiksvragen over datasets heen, gebaseerd op samenhang tussen datasets.
 
-Eerder is de DisGeo Demonstrator fase 1 ontwikkeld, waarbij we er tegenaan liepen dat het wel mogelijk, maar om meerdere redenen niet ideaal is om API's aan elkaar te knopen en op die manier integrale vragen over datasets heen te kunnen stellen. Daarom besloten we een tweede versie van de demonstrator te maken die het ideaalplaatje concreet maakt zodat daarmee:
+In 2019 is de DisGeo Demonstrator fase 1 ontwikkeld, waarbij we er tegenaan liepen dat het wel mogelijk, maar om meerdere redenen niet ideaal is om API's aan elkaar te knopen en op die manier integrale vragen over datasets heen te kunnen stellen [[DLL1]]. Daarom besloten we een tweede versie van de demonstrator te maken die het ideaalplaatje concreet maakt zodat daarmee:
 - Een inrichtingsvorm van DISGeo concreet wordt getoond, 
 - inclusief een infrastructuur van één of meerdere knowledge graphs 
 - Concrete use cases worden getoond. 

@@ -209,7 +209,7 @@ export class DefaultTemplate extends React.Component<TemplateProps, {}> {
             return property.values.map(({value}) => value);
         } else if (isLiteralProperty(property)) {
             return property.values.map(function(value) {
-                if(value.datatype.value == "http://www.w3.org/2001/XMLSchema#dateTime")
+                if(value.datatype !== undefined && value.datatype.value == "http://www.w3.org/2001/XMLSchema#dateTime")
                     return(moment(value.value).format('MMM D YYYY HH:mm:ssA'))
                 return value.value;
             })

@@ -1,11 +1,14 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var SparqlGenerator = require('sparqljs').Generator
 
 /**
  * import our node template replacements, referenced in the template resolver
  */
 import { DefaultTemplate } from  './templates/defaulttemplate'
 import { TestTemplate } from  './templates/testtemplate'
+
+import { DisGeoToolbar } from './Toolbar/toolbar'
 
 /**
  * Ontodia import
@@ -82,27 +85,72 @@ function onWorkspaceMounted(workspace) {
      /**
       * user Stardog defined functions, requires FT search to be enabled
       */
-     SparqlDialect.fullTextSearch = {
-            prefix: '',
+     SparqlDialect.fullTextSearch= {
+            prefix: "",
             queryPattern: `
-            ?inst rdfs:label ?searchLabel.
-            (?searchLabel ?score) <tag:stardog:api:property:textMatch> "\${text}".
-        `}
+                  ?inst rdfs:label ?searchLabel.
+                  ?searchLabel bif:contains "\${text}".
+                  BIND(0 as ?score)
+            `}
     /**
      * replace filter type for performance improvements
      */
     SparqlDialect.filterTypePattern = '?inst a ?class'
   
+    SparqlDialect.classTreeQuery = `
+                SELECT ?class ?label ?parent
+                WHERE {
+                    {
+                        ?class a rdfs:Class
+                    } UNION {
+                        ?class a owl:Class
+                    }
+                    FILTER ISIRI(?class)
+                    Filter not exists {?class owl:unionOf ?union}
+                    OPTIONAL {?class rdfs:label ?label}
+                    OPTIONAL {?class rdfs:subClassOf ?parent. FILTER ISIRI(?parent)}
+                    
+                }
+                `
     /**
      * Add public endpoint and refer to our modified dialect
      */
+
     model.importLayout({
         dataProvider: new Ontodia.SparqlDataProvider({
-            endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/knowledge-graph/services/knowledge-graph/sparql',
-            queryMethod: Ontodia.SparqlQueryMethod.GET
-        }, SparqlDialect),
-    });
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/knowledge-graph/services/knowledge-graph/sparql',
+                        queryMethod: Ontodia.SparqlQueryMethod.GET
+                    }, 
+                    SparqlDialect),
+        });
+        
+    /**
+     * Sample config with multiple endpoints in a composite view.
+     */
     
+    /*model.importLayout({
+        dataProvider: new Ontodia.CompositeDataProvider([
+            {
+                dataProvider: new Ontodia.SparqlDataProvider({
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/woz/services/woz/sparql',
+                        queryMethod: Ontodia.SparqlQueryMethod.GET
+                    }, 
+                    SparqlDialect),
+                name: "woz"
+            },
+            {
+                dataProvider: new Ontodia.SparqlDataProvider({
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/bag/services/bag/sparql',
+                        queryMethod: Ontodia.SparqlQueryMethod.GET
+                    }, 
+                    SparqlDialect),
+                name: "bag"
+            }
+        ]),
+    });*/
+    
+    
+
     /**
      * get the '?resource' search param and load that resource.
      */
@@ -125,17 +173,23 @@ const props = {
     // function to call when workspace is mounted
     ref: onWorkspaceMounted,
     // Typestyleresolver ( see above )
-    typeStyleResolver: TestTypeStyleBundle,
+        typeStyleResolver: TestTypeStyleBundle,
     // resolver for templates ( see below )
     elementTemplateResolver: templateResolver,
     languages: [
-        {code: 'en', label: 'English'},
+        {code: 'nl', label: 'Nederlands'},
     ],
-    language: 'en'
+    language: 'nl',
+    toolbar:  React.createElement(DisGeoToolbar, { onGenerateSparql: generateSparql })
 };
+
+// Store workspace to be able to access the model later (not clean)
+var pubWorkspace = null;
+
+
 // ReactJS way of adding components
- document.addEventListener('DOMContentLoaded', () => {
-        ReactDOM.render(React.createElement(Ontodia.Workspace, props), document.getElementById('onto-container'))
+document.addEventListener('DOMContentLoaded', () => {
+        pubWorkspace = ReactDOM.render(React.createElement(Ontodia.Workspace, props), document.getElementById('onto-container'))
     });
  
  /**
@@ -151,3 +205,69 @@ const props = {
 	        return DefaultTemplate
 	    }
 	}
+
+function generateSparql(){
+    var elements=pubWorkspace.model.graph.elements.ordered;
+    let parameterNames = new Map()
+    let parameterId = new Map()
+    let bgp = new Set();
+    //build parameter names
+    for (const elm in elements){
+        let id  = getQname(elements[elm]._data.types[0])
+        if(!parameterId.has(id + "1")){
+            parameterNames.set(elements[elm]._data.id,id+"1")
+            parameterId.set(id + "1",elements[elm]._data.id)
+        }
+
+        for(let cls in elements[elm]._data.types){
+            if(elements[elm]._data.types[cls]!="http://www.opengis.net/ont/geosparql#Feature" &&
+            elements[elm]._data.types[cls]!="http://rdf.histograph.io/PlaceInTime"){
+                let stmt = { subject: { "termType": "Variable", "value":  parameterNames.get(elements[elm]._data.id) },
+                                predicate: { "termType": "NamedNode", "value": "http://www.w3.org/2000/01/rdf-schema#type" },
+                                object: {"termType": "NamedNode", "value": elements[elm]._data.types[cls]}
+                            }
+                bgp.add(JSON.stringify(stmt))
+            }
+            break;
+        }
+        //console.log("id:" + id);
+        //parameterNames.set()
+    }
+    // now go over all the links
+    for (const elm in elements){
+        let links = elements[elm].links
+        for(const lnk in links){
+            let link = links[lnk]
+            let stmt = { subject: { "termType": "Variable", "value":  parameterNames.get(link._data.sourceId) },
+                predicate: { "termType": "NamedNode", "value": link._data.linkTypeId },
+                object: {"termType": "Variable", "value": parameterNames.get(link._data.targetId)}
+               }
+            bgp.add(JSON.stringify(stmt))
+        }
+    }
+    let SparqlQuery = { "queryType": "SELECT",
+                        "variables":[],
+                    "where":[
+                        {
+                            "type": "bgp",
+                            "triples": []
+                        }                        
+                        ],
+                    "type": "query"    
+                    }
+    for(let stmt of bgp){
+        SparqlQuery.where[0].triples.push(JSON.parse(stmt));
+    }
+    for(let parm of parameterNames.values()){
+        SparqlQuery.variables.push({"termType": "Variable","value":parm})
+    }
+    let generator = new SparqlGenerator()
+    console.log(generator.stringify(SparqlQuery))
+}
+
+function getQname(uri){
+    if(uri.lastIndexOf("#")>0)
+        return uri.substring(uri.lastIndexOf("#")+1)
+    else 
+        return uri.substring(uri.lastIndexOf("/")+1)
+}

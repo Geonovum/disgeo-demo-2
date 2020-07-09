@@ -1,5 +1,15 @@
 # Introductie
 
+## Context
+
+Het ministerie van BZK beoogt met het traject Doorontwikkeling in Samenhang (DISGeo) meer samenhang te krijgen in het stelsel van geo(basis)registraties waarbij de focus ligt op semantische harmonisatie van registraties en informatiemodellen, en alternatieve methoden van gegevensuitwisseling en bijhouding (meer centraal, minder kopiëren). 
+
+Om te onderzoeken hoe dit doel het beste bereikt kan worden zijn verschillende demonstrators ontwikkeld. Over de eerste demonstrator, uit 2019, is een rapport met lessons learned gepubliceerd [[DLL1]]. De nadruk lag in die fase op het onderzoeken wat er mogelijk is met de huidige stand van de techniek die nu breed wordt toegepast (gebaseerd op API’s). De tweede demonstrator onderzoekt juist vanuit de gewenste uiteindelijke situatie wat er mogelijk is. De bevindingen uit deze tweede demonstrator worden beschreven in dit document.
+
+Het is de bedoeling dat we de resultaten van de demonstrator kunnen gebruiken om omdenken naar integraal gebruik te promoten (zonder de data zelf in huis te halen). Het is een uitgelezen kans om het ‘publiek’ vanuit integraal gebruik met de data te laten werken. 
+
+## De demo
+
 De DisGeo Demo, fase 2, is ontwikkeld van 8 - 14 juli 2020 in een High 5 setting door Kadaster, Provincie Noord-Holland, Netage, IHW, en Geonovum in opdracht van BZK. De demo toont wat Linked Data voor DisGeo kan betekenen.
 
 Een High 5 is een soort 5 dagen lange innovatiesprint, waarbij ontwikkelaars samen in korte tijd bepaalde use cases implementeren in een demonstrator. Het verschil met een gewone sprint is dat een High 5 innoverend en inspirerend is: *'je mag verrast worden'*.  
@@ -14,7 +24,7 @@ In 2019 is de DisGeo Demonstrator fase 1 ontwikkeld, waarbij we er tegenaan liep
 - De demonstrator breed raadpleegbaar is via een lab-omgeving of productie-omgeving (bij voorkeur bij het Kadaster).
 - Lessons learned worden opgeleverd voor DISGeo waaronder ook aanbevelingen voor het (conceptueel) informatiemodel
 
-En daar mee ook
+En daarmee ook
 - Componenten beschikbaar komen voor de Linked Data – en URI-strategie en passend bij de datastrategie van DISGeo die parallel wordt opgesteld.
 - De gebruikers met periodiek geactualiseerde data de infrastructuur van knowledge graphs nu al concreet kunnen toepassen in hun werk. 
 

@@ -8,7 +8,7 @@ Selectiecriteria voor de data:
 
 Data verzamelen en prepareren is in de weken voorafgaand aan de High 5 grotendeels al gedaan. Om 14:45 op dag 1 van de High 5 is de data die nodig is voor de demonstrator redelijk compleet. 
 
-Datasets waarbij is aangegeven dat ze via Kadaster Labs beschikbaar zijn, is hier te vinden: https://data.labs.kadaster.nl/disgeo/
+Datasets waarbij is aangegeven dat ze via Kadaster Labs beschikbaar zijn, is hier te vinden: https://data.labs.kadaster.nl/disgeo/. Daar is ook beschreven welke gegevens per dataset beschikbaar zijn en wat de licentie is.
 
 ## DisGeo data
 Basisregistratie Adressen en Gebouwen (BAG)
@@ -64,6 +64,10 @@ Rijksmonumentenregister
 
 Incidenten en BRK
 - Een gesloten dataset
+
+Chloridegehalten
+- Chloridegehalten in oppervlaktewater 
+- Van waterschap Hollandse Delta
 
 ## Voor use case Water
 Rioleringsdata

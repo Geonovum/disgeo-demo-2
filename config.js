@@ -118,13 +118,13 @@ var respecConfig =
         publisher:  "naam van de publiceerder",
         company:    "eventueel naam van bedrijf",
     },
-    MIM: {
-      id: "mim10",
-      title: "MIM - Metamodel Informatie Modellering",
-      href: "https://docs.geostandaarden.nl/mim/mim10/",
+    "DLL1": {
+      id: "dll1",
+      title: "DisGeo Demo Lessons Learned",
+      href: "https://docs.geostandaarden.nl/disgeo/dll/",
       status: "Definitief",
       publisher: "Geonovum",
-      date: "2017-06-14"
+      date: "2020-02-19"
     },
     "ISO19108-2005": {
       "href": "https://www.iso.org/standard/39891.html",

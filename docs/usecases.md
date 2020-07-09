@@ -16,6 +16,10 @@ Relevant gebied – **regio Rotterdam**
 
 Waar gaat het blus/afvalwater naar toe, wat is de stroming. Je kunt uitrekenen: Als je een pand hebt met x m2 oppervlak dat in brand staat, hoeveel water moet je er dan op gooien en gaat dus naar het riool. Gegevens over overstortputten, oppervlaktewater, verwerkingscapaciteit spelen hier een rol. 
 
+In het geval van een grote brand moet je weten waar het bluswater heen gaat zodat dit goed afgevoerd kan worden. Het kan om grote hoeveelheden bluswater gaan, dat moet worden afgevoerd zodat het geen overlast veroorzaakt. Bovendien moet het worden afgevoerd naar een plek waar het geen kwaad kan, want het zal vaak vervuild zijn. 
+
+Andersom kan het onttrekken van veel oppervlaktewater tot gevolg hebben dat de grondwaterstand in de omgeving significant daalt, wat allerlei gevolgen kan hebben. Ook dat moet je dus in de gaten houden.
+
 Deze use case demonstreert ook het linken van eigen data aan basisregistratie data. In dit geval zijn dit de BOR data. We werken kort uit hoe je een eigen dataset kan linken aan objecten uit een basisregistratie. Moeten daar in DisGeo gestandaardiseerde properties voor komen, om naar bv een BAG verblijfsobject te verwijzen, zodat zulke verwijzingen in elke dataset herkenbaar terug te vinden zijn?
 
 <aside class='note'>Deze achteraf-analyse maakt goed duidelijk dat je dit ook breder kan trekken, je kan daarbij denken aan allerlei andere analysevragen. </aside>

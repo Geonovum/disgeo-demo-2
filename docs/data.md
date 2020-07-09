@@ -8,12 +8,15 @@ Selectiecriteria voor de data:
 
 Data verzamelen en prepareren is in de weken voorafgaand aan de High 5 grotendeels al gedaan. Om 14:45 op dag 1 van de High 5 is de data die nodig is voor de demonstrator redelijk compleet. 
 
+Datasets waarbij is aangegeven dat ze via Kadaster Labs beschikbaar zijn, is hier te vinden: https://data.labs.kadaster.nl/disgeo/
+
 ## DisGeo data
 Basisregistratie Adressen en Gebouwen (BAG)
 - Productiedata via Kadaster
 - https://bag.basisregistraties.overheid.nl
 - Of via Kadaster Labs
-
+- Er wordt een linkset BAG-BKK (adres - perceel) gemaakt.
+ 
 Basisregistratie Topografie (BRT)
 - Productiedata via Kadaster
 - https://brt.basisregistraties.overheid.nl
@@ -57,13 +60,17 @@ Kinderdagverblijven
 
 Rijksmonumentenregister
 - Via RCE endpoint
-- Willen we met percelen koppelen 
+- Linkset naar percelen 
+
+Incidenten en BRK
+- Een gesloten dataset
 
 ## Voor use case Water
 Rioleringsdata
 - Van RIONED 
 - Via hun SPARQL endpoint
 - Is beschikbaar voor delen van Nederland
+- Deze data is niet gekoppeld aan BGT. Rioolputten uit GWSW zouden aan IMGeo rioolputten gekoppeld kunnen worden via een linkset.
 
 Beheer openbare ruimte (BOR) data
 - Areaaldata van Provincie Noord-Holland van de trajecten N203 en N513 (Uitgeest, Castricum) 

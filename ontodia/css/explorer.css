@@ -28,6 +28,17 @@
 	content: " "
 }
 
+.disgeo-map {
+	border: 1px solid darkgrey;
+}
+
+.disgeo-map .title {
+	overflow-wrap: anywhere;
+	padding: 4px;
+	color: darkgray;
+	border-bottom: 1px solid;
+}
+
 .geo_point {
 	height: 300px;
 	width: 300px;

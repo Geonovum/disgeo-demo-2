@@ -91,13 +91,12 @@ export class geoFeatureBox extends React.Component<TemplateProps, {}> {
     render() {
         
         return (
-            <div className='ontodia-standard-template'
+            <div className='ontodia-standard-template disgeo-map'
                 style={{borderColor: this.props.color}}>
-                <div className={this.props.iconUrl} />
-                <div className='example-label'>{this.props.label}
+                <div className='title'>{this.props.label}</div>
                 <div id={'map-'+this.props.elementId} className='geo_point'/>
-                </div>
             </div>
+
         );
     }
 

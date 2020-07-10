@@ -67,8 +67,12 @@ export class geoFeatureBox extends React.Component<TemplateProps, {}> {
         let map = L.map('map-'+this.props.elementId, {
           zoom: 16,
           layers: [
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-              attribution: '&copy; OSM'
+            L.tileLayer('https://geodata.nationaalgeoregister.nl/tiles/service/wmts/brtachtergrondkaart/EPSG:3857/{z}/{x}/{y}.png', {
+                attribution: '<a href="https://creativecommons.org/licenses/by/3.0/nl/">CC BY 3.0</a> Kadaster', // Attributie van kaartmateriaal
+                maxZoom: 18, // Maximale zoom niveau van deze getegelde kaart service
+                minZoom: 8, // Minimale zoom niveau van deze getegelde kaart service
+                tileSize: 256, // Grootte van de tegels die opgehaald worden
+                zoomOffset: 0 // Zoom offset (meestal 0)
             }),
           ]
         });

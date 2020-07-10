@@ -120,19 +120,19 @@ function onWorkspaceMounted(workspace) {
         dataProvider: new Ontodia.CompositeDataProvider([
             {
                 dataProvider: new Ontodia.SparqlDataProvider({
-                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/woz/services/woz/sparql',
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/disgeo/AreaaldataN203N513/services/AreaaldataN203N513/sparql',
                         queryMethod: Ontodia.SparqlQueryMethod.GET
                     }, 
                     SparqlDialect),
-                name: "woz"
+                name: "organisatie-imbor"
             },
             {
                 dataProvider: new Ontodia.SparqlDataProvider({
-                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/bag/services/bag/sparql',
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/bgt-high3/bgt/services/bgt/sparql',
                         queryMethod: Ontodia.SparqlQueryMethod.GET
                     }, 
                     SparqlDialect),
-                name: "bag"
+                name: "sor-bgt"
             }
         ]),
     });

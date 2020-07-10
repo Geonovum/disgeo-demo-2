@@ -6,7 +6,7 @@ var SparqlGenerator = require('sparqljs').Generator
  * import our node template replacements, referenced in the template resolver
  */
 import { DefaultTemplate } from  './templates/defaulttemplate'
-import { TestTemplate } from  './templates/testtemplate'
+import { geoFeatureBox } from  './templates/geoFeatureBox'
 
 import { DisGeoToolbar } from './Toolbar/toolbar'
 
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // if we have geos:Geometry then use the test template to draw a map, all other default
         if (types.indexOf('http://www.opengis.net/ont/geosparql#Geometry') !== -1) {
             // see templates/testtemplate.tsx
-	        return TestTemplate;
+	        return geoFeatureBox;
 	    } else {
             // see defaulttemplate.tsx
 	        return DefaultTemplate

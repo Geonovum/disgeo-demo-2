@@ -1,5 +1,5 @@
 {
-  "name": "ontodia-disgeo",
+  "name": "ontodia-imbor_bgt",
   "version": "0.0.1",
   "description": "DisGeo-2 Ontodia browser",
   "main": "src/index.js",
@@ -18,7 +18,7 @@
     "watch": "webpack --watch",
     "start": "webpack-dev-server --host 0.0.0.0",
     "build": "webpack --mode=production",
-    "product": "webpack -p && cd dist && TODAY=$(date \"+%Y-%m-%d_%H-%M-%S\"); zip -r -X ../release/graph-explorer-$npm_package_version-$TODAY.zip ."
+    "product": "webpack -p && cd dist && TODAY=$(date \"+%Y-%m-%d_%H-%M-%S\"); zip -r -X ../../releases/graph-imbor_bgt-$npm_package_version-$TODAY.zip ."
   },
   "dependencies": {
     "@types/react": "^16.9.19",

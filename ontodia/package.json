@@ -1,6 +1,6 @@
 {
   "name": "ontodia-disgeo",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "DisGeo-2 Ontodia browser",
   "main": "src/index.js",
   "author": "bart@netage.nl",
@@ -17,7 +17,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --host 0.0.0.0",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "product": "webpack -p && cd dist && TODAY=$(date \"+%Y-%m-%d_%H-%M-%S\"); zip -r -X ../../releases/graph-explorer-$npm_package_version-$TODAY.zip ."
   },
   "dependencies": {
     "@types/react": "^16.9.19",

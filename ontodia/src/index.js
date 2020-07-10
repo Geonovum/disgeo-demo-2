@@ -196,15 +196,19 @@ document.addEventListener('DOMContentLoaded', () => {
   * based on a type return a template to render the specific type
   */
  function templateResolver(types) {
-        // if we have geos:Geometry then use the test template to draw a map, all other default
-        if (types.indexOf('http://www.opengis.net/ont/geosparql#Geometry') !== -1) {
-            // see templates/testtemplate.tsx
-	        return geoFeatureBox;
-	    } else {
-            // see defaulttemplate.tsx
-	        return DefaultTemplate
-	    }
-	}
+    // if we have geos:Geometry then use the test template to draw a map, all other default
+    if (types.indexOf('http://www.opengis.net/ont/geosparql#Geometry') !== -1 ||
+        types.indexOf('http://www.opengis.net/ont/sf#Polygon') !== -1 ||
+        types.indexOf('http://www.opengis.net/ont/sf#LineString') !== -1 ||
+        types.indexOf('http://www.opengis.net/ont/sf#MultiLineString') !== -1 ||
+        types.indexOf('http://www.opengis.net/ont/sf#MultiPolygon') !== -1) { 
+        // see templates/geoFeatureBox.tsx
+        return geoFeatureBox;
+    } else {
+        // see defaulttemplate.tsx
+        return DefaultTemplate
+    }
+}
 
 function generateSparql(){
     var elements=pubWorkspace.model.graph.elements.ordered;

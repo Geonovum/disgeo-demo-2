@@ -183,8 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
   */
  function templateResolver(types) {
         // if we have geos:Geometry then use the test template to draw a map, all other default
-        if (types.indexOf('http://www.opengis.net/ont/geosparql#Geometry') !== -1) {
-            // see templates/testtemplate.tsx
+        if (types.indexOf('http://www.opengis.net/ont/geosparql#Geometry') !== -1 ||
+            types.indexOf('http://www.opengis.net/ont/sf#Polygon') !== -1 ||
+            types.indexOf('http://www.opengis.net/ont/sf#LineString') !== -1 ||
+            types.indexOf('http://www.opengis.net/ont/sf#MultiLineString') !== -1 ||
+            types.indexOf('http://www.opengis.net/ont/sf#MultiPolygon') !== -1) { 
+            // see templates/geoFeatureBox.tsx
 	        return geoFeatureBox;
 	    } else {
             // see defaulttemplate.tsx

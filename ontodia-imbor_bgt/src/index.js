@@ -108,7 +108,9 @@ function onWorkspaceMounted(workspace) {
                     FILTER ISIRI(?class)
                     Filter not exists {?class owl:unionOf ?union}
                     OPTIONAL {?class rdfs:label ?label}
-                    OPTIONAL {?class rdfs:subClassOf ?parent. FILTER ISIRI(?parent)}
+                    OPTIONAL {?class rdfs:subClassOf ?parent. 
+                        filter not exists{ ?parent a owl:Restriction} 
+                        FILTER ISIRI(?parent)}
                     
                 }
                 `

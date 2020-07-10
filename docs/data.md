@@ -1,21 +1,21 @@
 # Data
-De gebruikte databronnen beschrijven we hier. 
+Er zijn allerlei verschillende databronnen gebruikt in de demonstrator. Sommmige daarvan zijn al beschikbare productiedata of waren al eerder ten behoeve van experimenten geproduceerd, andere zijn ter gelegenheid van deze demonstrator als linked data gepubliceerd. 
 
 Selectiecriteria voor de data: 
 - Het uitgangspunt is dat ALLE data die we in de demonstrator gebruiken, Linked Data is. In sommige gevallen zetten we data zelf nog om.
-- Primaire voorkeur voor productiedata
-- De data moet beschikbaar zijn voor Rotterdam en/of Castricum
+- Primaire voorkeur voor productiedata.
+- De data moet beschikbaar zijn voor tenminste één van onze twee use case gebieden: Rotterdam en Castricum
 
-Data verzamelen en prepareren is in de weken voorafgaand aan de High 5 grotendeels al gedaan. Om 14:45 op dag 1 van de High 5 is de data die nodig is voor de demonstrator redelijk compleet. 
+Het verzamelen en prepareren van de data is in de weken voorafgaand aan de High 5 grotendeels al gedaan. Om 14:45 op dag 1 van de High 5 is alle data die nodig is voor de demonstrator redelijk compleet. Dit ging sneller dan bij eerdere soortgelijke experimenten. 
 
-Datasets waarbij is aangegeven dat ze via Kadaster Labs beschikbaar zijn, is hier te vinden: https://data.labs.kadaster.nl/disgeo/. Daar is ook beschreven welke gegevens per dataset beschikbaar zijn en wat de licentie is.
+Datasets waarbij is aangegeven dat ze via Kadaster Labs beschikbaar zijn, zijn te vinden op de [Kadaster Labs DISGeo landingspagina](https://data.labs.kadaster.nl/disgeo/), ook te bevragen via het [SPARQL endpoint](https://api.labs.kadaster.nl/datasets/disgeo/disgeo/services/disgeo/sparql). Op de landingspagina is beschreven welke gegevens per dataset beschikbaar zijn en onder welke licentie deze eventueel te gebruiken is.
 
 ## DisGeo data
 Basisregistratie Adressen en Gebouwen (BAG)
 - Productiedata via Kadaster
 - https://bag.basisregistraties.overheid.nl
 - Of via Kadaster Labs
-- Er wordt een linkset BAG-BKK (adres - perceel) gemaakt.
+- Er is een linkset BAG-BKK (adres - perceel) gemaakt.
  
 Basisregistratie Topografie (BRT)
 - Productiedata via Kadaster

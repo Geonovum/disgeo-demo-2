@@ -134,3 +134,10 @@ In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit 
 
 ## Geen vendor lock in!
 *beschrijven dat we helemaal geen afspraken hadden gemaakt over te gebruiken tooling, en dat iederen gewoon willekeurig welke tools kon gebruiken die linked data ondersteunde. We hebben daar geen enkel interoperabiliteitsprobleem mee ondervonden.* 
+
+## Samenhang werkt echt
+Door het op de juiste manier doorvoeren van de links in de linked data versie van de basis registraties is de waarde van de links direct zichtbaar te maken. De combinatie van de juiste [tooling](ontidia) en het toepassen van de juiste standaarden laat zien dat bevragen van basis registraties over hun silo grenzen heen prima werkt. De relatie van instanties in bijv de WOZ, BAG en BRK zijn direct inzichtelijk te maken zonder de noodzaak om alle data in 1 systeem te laden
+Als een organisatie een interne dataset gebruikt die volgens de standaarden refereerd aan een basis registratie is de koppeling direct bruikbaar waardoor de interne dataset direct verrijkt kan worden met gegevens uit de basis registratie.[CASTRICUMUSECASE].
+Zoals genoemd in [uniforme_referenties] kan de relatie met de basis registratie ook dienen als kwaliteits check voor de interne data.
+<aside class='example'>Als een interne registratie gerelateerd is een verblijfsobject maar de link naar de basis registratie wijst naar een pand is dat een indicatie van een data kwaliteits probleem.</aside>
+<aside class='note'>De samenhang op deze manier is voornamelijk bruikbaar voor het verkennen van informatie van enkele instanties, grootschalige analyse is niet zondermeer mogelijk.</aside>

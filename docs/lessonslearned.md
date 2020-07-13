@@ -131,3 +131,6 @@ Als je hierbij echter een geovraag wilt stellen (bijvoorbeeld: welke putten uit 
 Om te bewerkstelligen dat vendors dit gaan ondersteunen, moet er in de GeoSPARQL standaard een aanbeveling komen over het ondersteuenn van geovragen in federatieve queries. GeoSPARQL is ouder dan SPARQL 1.1, waarin federatie geregeld is.
 
 In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit opgelost door de gewenste query in stukken te knippen met een linkset tussen BGT en GWSW.
+
+## Geen vendor lock in!
+*beschrijven dat we helemaal geen afspraken hadden gemaakt over te gebruiken tooling, en dat iederen gewoon willekeurig welke tools kon gebruiken die linked data ondersteunde. We hebben daar geen enkel interoperabiliteitsprobleem mee ondervonden.* 

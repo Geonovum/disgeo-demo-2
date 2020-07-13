@@ -98,7 +98,7 @@ function onWorkspaceMounted(workspace) {
     SparqlDialect.filterTypePattern = '?inst a ?class'
   
     SparqlDialect.classTreeQuery = `
-                SELECT ?class ?label ?parent
+                SELECT ?class (sample (?label) as ?label) ?parent
                 WHERE {
                     {
                         ?class a rdfs:Class
@@ -120,7 +120,7 @@ function onWorkspaceMounted(workspace) {
 
     model.importLayout({
         dataProvider: new Ontodia.SparqlDataProvider({
-                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/knowledge-graph/services/knowledge-graph/sparql',
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/disgeo/disgeo/services/disgeo/sparql',
                         queryMethod: Ontodia.SparqlQueryMethod.GET
                     }, 
                     SparqlDialect),
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   * based on a type return a template to render the specific type
   */
  function templateResolver(types) {
-    // if we have geos:Geometry then use the test template to draw a map, all other default
+    // if we have geo:Geometry then use the test template to draw a map, all other default
     if (types.indexOf('http://www.opengis.net/ont/geosparql#Geometry') !== -1 ||
         types.indexOf('http://www.opengis.net/ont/sf#Polygon') !== -1 ||
         types.indexOf('http://www.opengis.net/ont/sf#Point') !== -1 ||
@@ -220,7 +220,9 @@ function generateSparql(){
     let bgp = new Set();
     //build parameter names
     for (const elm in elements){
-        let id  = getQname(elements[elm]._data.types[0])
+        let id= "Thing"
+        if(elements[elm]._data.types.length > 0)
+            id  = getQname(elements[elm]._data.types[0])
         if(!parameterId.has(id + "1")){
             parameterNames.set(elements[elm]._data.id,id+"1")
             parameterId.set(id + "1",elements[elm]._data.id)
@@ -269,6 +271,7 @@ function generateSparql(){
         SparqlQuery.variables.push({"termType": "Variable","value":parm})
     }
     let generator = new SparqlGenerator()
+    console.log(SparqlQuery)
     console.log(generator.stringify(SparqlQuery))
 }
 

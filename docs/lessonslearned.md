@@ -1,5 +1,5 @@
 # De Lessons Learned
-Tijdens het ontwikkelen van de demonstrator is er veel geleerd. Belangrijke inzichten voor de verdere ontwikkeling van DISGeo en voor diverse standaardenactiviteiten. 
+Tijdens het ontwikkelen van de demonstrator is er veel geleerd. Dit zijn belangrijke inzichten voor de verdere ontwikkeling van DISGeo en voor diverse standaardenactiviteiten. Wat goed bleek te werken, en wat (nog) niet, wordt in dit hoofdstuk beschreven.
 
 ## Belang van linken van geodata
 
@@ -8,7 +8,7 @@ Veel van de datasets die we gebruiken in de demonstrator zijn wel op basis van l
 Onze basisregistraties zijn bij uitstek geschikt om naar te linken. Toch gebeurt dit nog veel te weinig. 
 
 Bijvoorbeeld
-- De water data die we in de Brandweer bluswater case Castricum gebruiken, bevat geen administratieve links naar basisregistraties [welke zouden dit dan moeten zijn?].
+- De data die we in de Brandweer bluswater case Castricum gebruiken, bevat geen administratieve links naar basisregistraties. Links tussen bijvoorbeeld IMGeo putten en GWSW rioolputten zouden veel toegevoegde waarde hebben. 
 - De Rijksmonumenten dataset zou eigenlijk links tussen rijksmonumenten en kadastrale percelen moeten bevatten, maar deze zijn niet aanwezig.
 
 Beide datasets bevatten wel *ruimtelijke relaties* met objecten uit basisregistraties. Door zelf een ruimtelijke vraag te stellen, bijvoorbeeld 'met welk kadastraal perceel overlapt dit rijksmonument?' kun je de informatie wel achterhalen. Maar dit heeft een aantal nadelen. 
@@ -56,45 +56,44 @@ In de huidige praktijk is er gebrek aan eenduidigheid bij het refereren naar obj
 
 Internationaal is er een gestandaardiseerd lijstje van linksoorten om te linken van het ene geo-object naar het andere (denk aan `within`, `touches`, `contains`). Dit is beschreven in Spatial Data on the Web [Best Practice 10: Use appropriate relation types to link Spatial Things](https://www.w3.org/TR/sdw-bp/#entity-level-links). 
 
-Wat echter nog ontbreekt, is een gestandaardiseerde property waarmee partijen kunnen linken naar objecten in basisregistraties, op zo'n manier dat gebruikers kunnen zien dat het naar een basisgegeven linkt.
-
-Naam: `disgeo-object-ref` of `authoritative-ref` of iets dergelijks. Deze property zou in de DISGeo vocabulaire moeten worden gestandaardiseerd.
+Wat echter nog ontbreekt, is een gestandaardiseerde property waarmee partijen kunnen linken naar objecten in basisregistraties, op zo'n manier dat gebruikers kunnen zien dat het naar een basisgegeven linkt. Zo'n property zou gestandaardiseerd moeten worden in de DISGeo vocabulaire onder bijvoorbeeld de naam: `disgeo-object-ref` of `authoritative-ref` of iets dergelijks.
 
 Overwegingen:
 - Specifieker hoeft meestal niet: je kunt achterhalen wat voor type object het is, door de link te volgen. 
-- In het geval dat een object linkt naar meerdere basisregistratie objecten, dan hebben specifiekere link namen meerwaarde, want je kunt dan aan de linknaam zien om wat voor objecten het gaat. Je hoeft ze dan niet op te halen om te zien om wat voor type objecten het gaat.
+- In het geval dat een object linkt naar meerdere basisregistratie objecten, dan hebben specifiekere referenties meerwaarde, want je kunt dan aan de linknaam zien om wat voor objecten het gaat. Je hoeft ze dan niet op te halen om te zien om wat voor type objecten het gaat (bijvoorbeeld: `disgeo-pand-ref`).
 - Als zulke, specifiekere links er zijn kun je daar ook kwaliteitscontroles op loslaten.
 
-Echter zijn er ook andere standaarden die dit soort linknamen definieren, bijvoorbeeld:
+<aside class='note'>Er zijn ook andere standaarden die dit soort linknamen definieren, bijvoorbeeld:
 - De NTA8035
 - De [building ontology](https://w3c-lbd-cg.github.io/bot/)
-- Semantic Sensor Network Ontology [vocab-ssn] standaardiseert de link van metingen naar het object waarvan een eigenschap gemeten wordt
+- Semantic Sensor Network Ontology [[vocab-ssn]] standaardiseert de link van metingen naar het object waarvan een eigenschap gemeten wordt
 
-Een gestandaardiseerde `disgeo-object-ref` moet niet in de weg staan van het gebruik van deze andere standaarden. Wel kan de DISGeo vocabulaire deze property en de specifiekere properties aanbieden als convenience elementen die je kan, maar niet hoeft te gebruiken. 
+Een gestandaardiseerde `disgeo-object-ref` staat niet in de weg van het gebruik van deze andere standaarden. Het is geen enkel probleem, sterker nog het verhoogt juist de interoperabiliteit, om in deze gevallen twee keer de link te leggen: één keer met behulp van de door DisGeo gestandaardiseerde link, en één keer met de link uit de andere standaard. 
+</aside>
 
 ## Open en gesloten linked data
-Hoe koppel je open en gesloten knowledge graphs aan elkaar? Afhankelijk van wat je linked data opslagsysteem, je triple store kan, is het tegenwoordig al mogelijk om ofwel op graph niveau, ofwel op objectniveau in te stellen op basis van welke voorwaarden gebruikers de data mogen ontvangen. 
+Hoe koppel je open en gesloten knowledge graphs aan elkaar? Afhankelijk van wat je linked data opslagsysteem, je triple store, kan is het tegenwoordig al mogelijk om ofwel op graph (dataset) niveau, ofwel op objectniveau in te stellen op basis van welke voorwaarden gebruikers de data mogen ontvangen. 
 
 Er zijn twee belangrijke use cases hiervoor: 
-- Als de data belangrijk is voor een commercieel verdienmodel, zoals bijvoorbeeld bij een bedrijf dat data verkoopt voor gebruik in apps. Dit bedrijf wil aan de ene kant goed gevonden worden en dus de data vindbaar via Google hebben, maar aan de andere kant ook weer niet de complete data in al haar rijkheid, want die wil ze kunnen verkopen. Een deel van de data is dan open, een deel alleen beschikbaar voor wie betaalt. Denk bijvoorbeeld aan een online krant.
-- Als de data privacygevoelig is. Je wilt dan een gebruiker alleen toegang geven tot persoonlijke informatie als via bv digid geverifieerd is dat die persoon die data mag zien. 
+- Als de data belangrijk is voor een commercieel verdienmodel, zoals bijvoorbeeld bij een bedrijf dat data verkoopt voor gebruik in apps. Dit bedrijf wil aan de ene kant goed gevonden worden en dus de data vindbaar via Google laten zijn, maar aan de andere kant ook weer niet de complete data in al haar rijkheid, want die wil ze kunnen verkopen. Een deel van de data is dan open, een deel alleen beschikbaar voor wie betaalt. Denk bijvoorbeeld aan een online krant.
+- Als de data privacygevoelig is. Je wilt dan een gebruiker alleen toegang geven tot persoonlijke informatie als via bijvoorbeeld Digid geverifiëerd is dat die persoon die data mag zien. 
 
-In de demonstrator hebben we dit niet uitgebreid laten zien, juist omdat het al eenvoudig is om dit te doen. Het is wel een belangrijk punt om je te realiseren: linked data betekent niet per sé linked OPEN data; en gesloten en open linked data kunnen aan elkaar gekoppeld worden waarbij authenticatie en authorisatie van de gesloten data met standaard web technieken geregeld zijn. 
+In de demonstrator hebben we dit niet uitgebreid laten zien, juist omdat het al eenvoudig is om dit te doen. Het is wel een belangrijk punt om je te realiseren: linked data betekent niet per sé linked OPEN data; en gesloten en open linked data kunnen aan elkaar gekoppeld worden waarbij authenticatie en authorisatie van de gesloten data met standaard web technieken eenvoudig en goed geregeld zijn. 
 
-## Netwerken in DisGeo opnemen, en koppelen met fysieke objecten
+## Netwerken in DiSGeo
 
-Objecten spelen vaak een rol in een netwerk, bijvoorbeeld rioolputten in een waterafvoernetwerk, bruggen in een wegtransportnetwerk, of sluizen in een watertransportnetwerk. 
+Geo-objecten spelen vaak een rol in een netwerk, bijvoorbeeld rioolputten in een waterafvoernetwerk, bruggen in een wegtransportnetwerk, of sluizen in een watertransportnetwerk. 
 
 De beheerders van deze netwerken (bijvoorbeeld waterschappen, wegbeheerders) leggen de fysieke- en beheerkenmerken van zulke objecten vast in een systeem, en het netwerk met haar knooppunten en verbindingen in een ander systeem. Bij het beantwoorden van vragen zoals in onze brandweer use cases, maar ook bijvoorbeeld in vele mobiliteits use cases, zijn *beide* van belang en vooral ook *in samenhang met elkaar*. 
 
-Wij trekken hieruit de conclusie dat DisGeo de mogelijkheid moet bieden om netwerkmodellen op te nemen, en er dus een netwerk / topologie model in het DisGeo informatiemodel moet zitten. Dit netwerkmodel moet geharmoniseerd zijn met de nieuwe NEN 2660, omdat deze standaard gevolgd zal worden in de systemen die gebruikt worden voor het beheer van de objecten. 
+Wij trekken hieruit de conclusie dat DiSGeo de mogelijkheid moet bieden om netwerkmodellen op te nemen, en er dus een netwerk / topologie model in het DisGeo informatiemodel moet zitten. Dit netwerkmodel is idealiter geharmoniseerd met de nieuwe NEN 2660, omdat deze standaard gevolgd zal worden in de systemen die gebruikt worden voor het beheer van de objecten. 
 
 Het betekent ook dat er links gelegd moeten worden tussen de knooppunten en verbindingslijnen in het netwerk enerzijds, en de fysieke objecten die het netwerk realiseren in de fysieke werkelijkheid anderszijds. Bijvoorbeeld: een link tussen BGT waterdeel dat een deel van een kanaal representeert en de corresponderende verbindingslijn in het waternetwerk.
 
 Alle fysieke objecten én alle knooppunten en verbindingslijnen moeten dus een ID hebben zodat er links naartoe gelegd kunnen worden. Met andere woorden, ze moeten voldoen aan Spatial Data on the Web [Best Practice 1: Use globally unique persistent HTTP URIs for Spatial Things](https://www.w3.org/TR/sdw-bp/#globally-unique-ids).
 
 ## Ruimtelijke vragen stellen aan linked data: de stand van zaken
-GeoSPARQL [[geosparql]] is de standaard querytaal voor het ruimtelijk bevragen van linked geodata. Vergeleken met 2 á 3 jaar geleden is de ondersteuning voor GeoSPARQL enorm verbeterd. Er heeft een verschuiving plaatsgevonden van academische implementaties naar commerciële. 
+GeoSPARQL [[geosparql]] is de standaard querytaal voor het ruimtelijk bevragen van linked geodata. Onze ervaringen tijdens deze high 5 lieten zien dat vergeleken met 2 á 3 jaar geleden  de ondersteuning voor GeoSPARQL enorm verbeterd is, zowel wat betreft compliance aan de standaard, als wat betreft performance. Er heeft een verschuiving plaatsgevonden van academische implementaties naar commerciële. 
 
 De meeste triple stores die GeoSPARQL support hebben, bieden: 
 - Voor het uitdrukken van geometrie: WKT en vaak ook GML. 
@@ -104,20 +103,20 @@ De meeste triple stores die GeoSPARQL support hebben, bieden:
 - Ruimtelijke indexering is meestal gebaseerd op WKT, 3D, en WGS84 coordinaten, dus je kan niet op centimeter nauwkeurigheid selecteren. 
 - Query rewrite en RDFS entailment onderdelen van GeoSPARQL worden meestal niet ondersteund. 
 
-De volgende tabel toont een aantal gangbare triple stores, of ze voldoen aan de GeoSPARQL standaard en hoe de performance is wat betreft ruimtelijke vragen. 
+De volgende tabel geeft voor een aantal gangbare triple stores aan of ze voldoen aan de GeoSPARQL standaard en hoe de performance is wat betreft ruimtelijke vragen. 
 
 product    | compliance | performance
 -----------|------------|------------
-GraphDB    | ja         | redelijk, maar met grote datavolumes zoals die van de basisregistraties niet toereikend
-Stardog    | ja         | ja
-virtuoso   | ja         | ja
-marklogic  | nee        | ja
-parliament | verouderd  | ...
+[GraphDB](http://graphdb.ontotext.com)    | ja         | redelijk, maar met grote datavolumes zoals die van de basisregistraties niet toereikend
+[Stardog](https://www.stardog.com)    | ja         | ja
+[Virtuoso](https://virtuoso.openlinksw.com)   | ja         | ja
+[MarkLogic](https://www.marklogic.com)  | nee        | ja
+[parliament](https://github.com/SemWebCentral/parliament) | verouderd  | ...
 
 De performance van GeoSPARQL-ondersteunende triple stores kan getest worden met deze [dataset for benchmarking GeoSPARQL](https://data.labs.kadaster.nl/geosparql-test). 
 
 ## Wanneer GeoSPARQL, wanneer GIS
-In de geowereld hebben we natuurlijk al lang de mogelijkheid om ruimtelijke vragen te stellen. Maar **wanneer is het nu beter om GeoSPARQL te gebruiken, en wanneer een GIS**? Je kunt je dit voorstellen als een tweetrapsraket. Vaak is er, om een ruimtelijk probleem op te lossen, eerst een selectie nodig van allerlei relevante data in een bepaald gebied. Vervolgens wordt op die dataverzameling nadere analyse gedaan om de gestelde vraag te beantwoorden. In zo'n geval spelen zowel GeoSPARQL als GIS een cruciale rol: 
+In de geowereld hebben we natuurlijk al lang de mogelijkheid om ruimtelijke vragen te stellen. Maar wanneer is het nu beter om GeoSPARQL te gebruiken, en wanneer een GIS? Je kunt je dit voorstellen als een tweetrapsraket. Vaak is er, om een ruimtelijk probleem op te lossen, eerst een selectie nodig van allerlei relevante data in een bepaald gebied. Data, die in verschillende systemen staat. Vervolgens wordt op die dataverzameling nadere analyse gedaan om de gestelde vraag te beantwoorden. In zo'n geval spelen zowel GeoSPARQL als GIS een cruciale rol: 
 - De selectievraag wordt beantwoord met GeoSPARQL. Hiermee kun je eenvoudig heterogene data bij elkaar zoeken, ongeacht of dit geodata is of niet. Denk bijvoorbeeld aan een combinatie van BAG panden, bijbehorende wijken en buurten en de CBS statistieken van dit gebied.  
 - De analysevraag wordt na het inladen van deze geselecteerde data vervolgens beantwoord in een GIS.
 
@@ -126,18 +125,26 @@ Bij het gebruik van GeoSPARQL is er nog wel een technische beperking. Eén van d
 
 "Geef mij het BGT object Wegdeel met id 12345 en zoek ook even bij dit andere endpoint met adres xxx op wat er nog meer over dit wegdeel bekend is"
 
-Als je hierbij echter een geovraag wilt stellen (bijvoorbeeld: welke putten uit endpoint GWSW vallen binnen het polygoon van wegdeel Y uit endpoint BGT?) is dat nog maar zeer beperkt mogelijk. Tussen 2 endpoints van dezelfde vendor, bijvoorbeeld twee Virtuoso endpoints, werkt het nog wel een beetje, maar tussen 2 verschillende niet. Mogelijke verklaring hiervoor is dat de endpoints alleen geovragen willen beantwoorden waarbij de objecten in de eigen ruimtelijke index staan.
+Als je hierbij echter een geovraag wilt stellen (bijvoorbeeld: welke putten uit endpoint GWSW vallen binnen het polygoon van wegdeel Y uit endpoint BGT?) is dat nog maar zeer beperkt mogelijk. Tussen 2 endpoints van dezelfde vendor, bijvoorbeeld twee Virtuoso endpoints, werkt het mogelijk nog wel, maar tussen 2 endpoints van verschillende triple store vendors niet. Hier laat de interoperabiliteit ons dus in de steek. Een mogelijke verklaring hiervoor is dat de endpoints alleen geovragen willen beantwoorden waarbij de objecten in de eigen ruimtelijke index staan.
 
-Om te bewerkstelligen dat vendors dit gaan ondersteunen, moet er in de GeoSPARQL standaard een aanbeveling komen over het ondersteuenn van geovragen in federatieve queries. GeoSPARQL is ouder dan SPARQL 1.1, waarin federatie geregeld is.
+Om te bewerkstelligen dat vendors dit mogelijk gaan maken, moet er in de GeoSPARQL standaard een aanbeveling komen over het ondersteunen van geovragen in federatieve queries. GeoSPARQL is ouder dan SPARQL 1.1, waarin federatie geregeld is.
 
 In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit opgelost door de gewenste query in stukken te knippen met een linkset tussen BGT en GWSW.
 
 ## Geen vendor lock in!
-*beschrijven dat we helemaal geen afspraken hadden gemaakt over te gebruiken tooling, en dat iederen gewoon willekeurig welke tools kon gebruiken die linked data ondersteunde. We hebben daar geen enkel interoperabiliteitsprobleem mee ondervonden.* 
+Tijdens de High 5, en ook tijdens het schrijven van deze Lessons Learned, waren we al snel zo lekker op dreef dat we ons op dag vier pas deze les realiseerden: 
+
+We hadden helemaal geen afspraken vooraf gemaakt over de te gebruiken tooling en versies daarvan. En tóch werkte alles. 
+
+Het feit dat we linked data standaarden gebruikten, en dat willekeurig welke tooling deze standaarden blijkbaar zonder ambiguiteiten ondersteunt, maakte het mogelijk dat we gewoon aan de slag konden met de toolset van onze voorkeur en daarbij geen enkel interoperabiliteitsprobleem ondervonden hebben. 
 
 ## Samenhang werkt echt
-Door het op de juiste manier doorvoeren van de links in de linked data versie van de basis registraties is de waarde van de links direct zichtbaar te maken. De combinatie van de juiste [tooling](ontidia) en het toepassen van de juiste standaarden laat zien dat bevragen van basis registraties over hun silo grenzen heen prima werkt. De relatie van instanties in bijv de WOZ, BAG en BRK zijn direct inzichtelijk te maken zonder de noodzaak om alle data in 1 systeem te laden
-Als een organisatie een interne dataset gebruikt die volgens de standaarden refereerd aan een basis registratie is de koppeling direct bruikbaar waardoor de interne dataset direct verrijkt kan worden met gegevens uit de basis registratie.[CASTRICUMUSECASE].
-Zoals genoemd in [uniforme_referenties] kan de relatie met de basis registratie ook dienen als kwaliteits check voor de interne data.
-<aside class='example'>Als een interne registratie gerelateerd is een verblijfsobject maar de link naar de basis registratie wijst naar een pand is dat een indicatie van een data kwaliteits probleem.</aside>
-<aside class='note'>De samenhang op deze manier is voornamelijk bruikbaar voor het verkennen van informatie van enkele instanties, grootschalige analyse is niet zondermeer mogelijk.</aside>
+Door het op de juiste manier doorvoeren van de links, in de tijdens de High 5 gerealiseerde linked data variant van de basisregistraties (de knowledge graph), is de waarde van de links direct zichtbaar te maken. Met een combinatie van de juiste [tooling](http://ontodia.org) en de juiste standaarden hebben we gezien dat bevragen van basisregistraties over hun silo grenzen heen prima werkt. De relaties tussen objectinstanties in bijvoorbeeld de WOZ, BAG en BRK zijn direct inzichtelijk te maken zonder de noodzaak om alle data in één systeem te laden.
+
+Als een organisatie een interne, gesloten dataset gebruikt die volgens de standaarden refereert aan een basisregistratie is de koppeling direct bruikbaar waardoor de interne dataset direct verrijkt kan worden met gegevens uit de basis registratie. Dit is te zien in de [Castricum use case](#brandweer-bluswater-case-castricum).
+
+Zoals genoemd in één van de lessons learned, [Uniforme referentie naar basisregistraties](#uniforme-referentie-naar-basisregistraties), kan de relatie met de basisregistratie ook dienen als kwaliteitscheck voor de interne data.
+
+<aside class='example'>Als een interne registratie gerelateerd is aan een verblijfsobject maar de link naar de basisregistratie wijst naar een pand is dat een indicatie van een data kwaliteits probleem.</aside>
+
+<aside class='note'>De samenhang op deze manier is voornamelijk bruikbaar voor het verkennen van informatie van enkele instanties, grootschalige analyse is niet zonder meer mogelijk.</aside>

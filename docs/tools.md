@@ -26,5 +26,11 @@ In combinatie met Ontodia kan dit een krachtige tool zijn. Als je in Ontodia een
 
 <aside class="voorbeeld">Je bekijkt in Ontodia alle gegevens van het pand waar een brand is geweest; dit is blijkbaar een interessante combinatie van eigenschappen die ervoor zorgde dat het incident kon plaatsvinden. Dit gegevenspatroon laat je met behulp van de Visual Query Builder los op alle panden in Rotterdam, zodat je vergelijkbare panden kunt vinden en preventieve maatregelen nemen om te voorkomen dat daar een vergelijkbare brand uitbreekt.</aside>
 
+## RML en R2RML
+[RML](https://rml.io/specs/rml/) en [R2RML](https://www.w3.org/TR/r2rml/) zijn de speficaties die gebruikt worden om een mapping te beschrijven om JSON, XML, CSV en databases om te zetten naar RDF formaat. Er zijn tools beschikbaar die het mogelijk maken om deze mappings uit te voeren. Binnen deze high-five zijn [CARML](https://github.com/carml/carml) en [LinkedDataFactory](https://github.com/netage) (Wordt binnenkort geopensourced) gebruikt.
+
+## XRM
+Om mappingen te maken in RML om bestanden om te zetten naar linked data formaat (rdf) is de [Expressive RDF Mapper](https://zazuko.com/products/expressive-rdf-mapper/) gebruikt. XRM werkt met een beschrijft een simpele syntax die binnen Eclipse gebruikt kan worden om de mapping vorm te geven en vervolgens geautomatiseerd de volledige mapping uitwerkt. Hierdoor worden mapping beheersbehaar en makkelijk op te bouwen en aan te passen.
+
 ## Overig 
 Eventueel toetje: KOOPjs in combinatie met ArcGis StoryMaps. Deze laatste kan nu ook met data werken die niet in ArcGis zit, maar die je live uit een SPARQL endpoint haalt. 

@@ -80,7 +80,7 @@ Er zijn twee belangrijke use cases hiervoor:
 
 In de demonstrator hebben we dit niet uitgebreid laten zien, juist omdat het al eenvoudig is om dit te doen. Het is wel een belangrijk punt om je te realiseren: linked data betekent niet per sé linked OPEN data; en gesloten en open linked data kunnen aan elkaar gekoppeld worden waarbij authenticatie en authorisatie van de gesloten data met standaard web technieken eenvoudig en goed geregeld zijn. 
 
-## Netwerken in DiSGeo
+## Netwerken koppelen met fysieke objecten
 
 Geo-objecten spelen vaak een rol in een netwerk, bijvoorbeeld rioolputten in een waterafvoernetwerk, bruggen in een wegtransportnetwerk, of sluizen in een watertransportnetwerk. 
 

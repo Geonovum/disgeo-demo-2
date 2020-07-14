@@ -34,19 +34,21 @@ Tenslotte kun je ook complexe analyses uitvoeren waarbij je baat hebt bij het ge
 
 ## Linksetjes... snel gemaakt, maar niet beheerd
 
-Er zijn tijdens de High 5 meerdere linksets gemaakt, bijvoorbeeld tussen scholen uit de Duo dataset en BAG verblijfsobjecten en tussen Rijksmonumenten uit de RCE dataset en kadastrale percelen. Dat is vrij eenvoudig te doen, met behulp van een SPARQL query, als er hiervoor maar aanknopingspunten in de data zijn. Het eerste 'linksetje' verscheen al tijdens de eerste uurtjes van de High 5. 
+Er zijn tijdens de High 5 meerdere linksets gemaakt, bijvoorbeeld tussen scholen uit de Duo dataset en BAG verblijfsobjecten en tussen Rijksmonumenten uit de RCE dataset en kadastrale percelen. Dat is, bij een dataset van beperkte omvang, vrij eenvoudig te doen, met behulp van een SPARQL query, als er hiervoor maar aanknopingspunten in de data zijn. Het eerste 'linksetje' verscheen al tijdens de eerste uurtjes van de High 5. 
 
 **MAAR** zulke linksets worden vaak eenmalig gemaakt op basis van een query. Terwijl ze eigenlijk in de data zouden moeten zitten en **beheerd worden**. De data wijzigt immers voordurend. Bovendien zou de kwaliteit van belangrijke links, zeker links van en naar basisregistraties, de verantwoordelijkheid van een data eigenaar moeten zijn. Dit beheer en eigenaarschap is er echter meestal niet, want wie is verantwoordelijk voor de linkset? Wie beheert de links en betaalt daar dus ook voor? 
 
 Er zijn tegenwoordig al aardig wat als linked data gepubliceerde (overheids- geo-) datasets in Nederland. *Maar deze data is vrijwel nooit gelinkt aan andere datasets!* Het gaat in andere woorden veelal om vier sterren, geen vijf sterren linked data - de vijfde ster betreft namelijk het gelinkt zijn van de data. 
 
-Het enige voorbeeld dat we kennen van een beheerde linkset is die tussen de BRT en de BAG. Deze gebruiken we niet in de demonstrator, maar noemen we hier als goed voorbeeld van een koppeling tussen twee datasets waarvan het beheer tegenwoordig geregeld is. Als onderdeel van het werkproces rondom het actualiseren van BRT data wordt ook gekeken naar de BAG panden, met als resultaat relaties tussen BRT objecten en gerelateerde BAG panden. Deze links werden tot voor kort echter weer weggegooid; tegenwoordig wordt deze informatie doorgespeeld aan het Kadaster data science team dat de linkset tussen BRT en BAG up to date houdt.
+Er zijn maar enkele voorbeelden die we kennen van een beheerde linkset tussen basisregistraties; tussen de BRT en de BAG, de BRK en de BAG en de BGT en de BAG.
+
+De linkset tussen de BRT en de BAG, is een goed voorbeeld van een koppeling tussen twee datasets waarvan het beheer tegenwoordig geregeld is. Als onderdeel van het werkproces rondom het actualiseren van BRT data wordt ook gekeken naar de BAG panden, met als resultaat relaties tussen BRT objecten en gerelateerde BAG panden. Deze links werden tot voor kort echter weer weggegooid; tegenwoordig wordt deze informatie doorgespeeld aan het Kadaster data science team dat de linkset tussen BRT en BAG up to date houdt.
 
 Tijdens de High 5 gemaakte linksets: 
 - Tussen BRK aliases (om verschillende URIs voor percelen te mappen)
 - Tussen BRK percelen en RCE Rijksmonumenten
 - Tussen DUO onderwijsaanbieders en BAG verblijfsobjecten
-- ...
+- Tussen NHR adresgegevens en BAG nummeraanduidingen
 
 Bij de vorige DISGeo demontrator kwam dit punt ook al naar voren. Zie [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). 
 

@@ -169,3 +169,8 @@ Zoals genoemd in één van de lessons learned, [Uniforme referentie naar basisre
 <aside class='example'>Als een interne registratie gerelateerd is aan een verblijfsobject maar de link naar de basisregistratie wijst naar een pand is dat een indicatie van een data kwaliteits probleem.</aside>
 
 <aside class='note'>De samenhang op deze manier is voornamelijk bruikbaar voor het verkennen van informatie van enkele instanties, grootschalige analyse is niet zonder meer mogelijk.</aside>
+
+## Hoe nu verder
+Tenslotte plaatsen we bij het succes van deze High 5 de volgende kanttekening. We waren deze vijf dagen, zoals één van de deelnemers zei, wel met de 'crème de la crème' van de Nederlandse linked data community. We gingen uit van een te realiseren 'ideaalplaatje', dat we met behulp van linked data standaarden en tooling hebben weten te realiseren. Alles wat we bereikt hebben, is mede te danken aan de expertise die er deze week aan tafel zat. Dit laat zien dat de mogelijkheden bijna onbegrensd zijn, en dat met behulp van linked data de DisGeo ambities te realiseren zijn, mits er voldoende kennis aanwezig is. 
+
+We zouden een soortgelijk experiment eigenlijk nog een keer moeten herhalen met ontwikkelaars die minder linked data kennis hebben. 

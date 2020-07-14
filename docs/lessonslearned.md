@@ -73,6 +73,16 @@ Overwegingen:
 Een gestandaardiseerde `disgeo-object-ref` staat niet in de weg van het gebruik van deze andere standaarden. Het is geen enkel probleem, sterker nog het verhoogt juist de interoperabiliteit, om in deze gevallen twee keer de link te leggen: één keer met behulp van de door DisGeo gestandaardiseerde link, en één keer met de link uit de andere standaard. 
 </aside>
 
+<aside class='note'>
+  Naast de relatief semantisch zwakkere disgeo relaties is het alsnog mogelijk om:
+  - als het object exact hetzelfde object is als in de basisregistratie,
+    - direct gebruik te maken van de basisregistratie URI als onderwerp van eigen triples;
+    - gebruikmaken van owl:sameAs om de objecten gelijk te stellen.
+  - andere semantische relaties te gebruiken om de relatie tussen de objecten te beschrijven.
+
+  Het is in linked data niet ongebruikelijk om een relatie met meerdere triples vast te leggen. Dit kan door het expliciet uitdrukken van deze triples, of bijvoorbeeld door afleiden van extra relaties op basis van inferencing.
+</aside>
+
 ## Open en gesloten linked data
 Hoe koppel je open en gesloten knowledge graphs aan elkaar? Afhankelijk van wat je linked data opslagsysteem, je triple store, kan is het tegenwoordig al mogelijk om ofwel op graph (dataset) niveau, ofwel op objectniveau in te stellen op basis van welke voorwaarden gebruikers de data mogen ontvangen. 
 

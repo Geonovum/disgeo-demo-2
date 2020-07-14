@@ -17,7 +17,8 @@ Scholenregister (DUO via KDP: Pano zoekt uit of dit interessant is)
 * CBS Wijken en Buurten (via PLDN)
 * NDW (proef Linked Data beschikbaar: Erwin vraagt Arnoud)
 * KvK (of via Bart, of via download bestand, of APIs: erwin zoekt uit)
-* Kinderdagverblijven (via Bart)
+* Kinderdagverblijven (via Nicky)
+* Register risicosituaties gevaarlijke stoffen (via Nicky)
 * Monumenten register (Pano)?
 
 (niet lInked data, misschien wel interessant: 3D gebouwen van NL)

@@ -1,7 +1,7 @@
 # De Lessons Learned
 Tijdens het ontwikkelen van de demonstrator is er veel geleerd. Dit zijn belangrijke inzichten voor de verdere ontwikkeling van DISGeo en voor diverse standaardenactiviteiten. Wat goed bleek te werken, en wat (nog) niet, wordt in dit hoofdstuk beschreven.
 
-## Belang van linken van geodata
+## We zien nog weinig links
 
 Veel van de datasets die we gebruiken in de demonstrator zijn wel op basis van linked data standaarden gepubliceerd, maar bevatten geen links naar andere data, ook niet naar bestaande basisregistraties. Toch zijn juist deze koppelingen erg waardevol. De Spatial Data on the Web Best Practices [[sdw-bp]] beveelt dit aan in [best practice 3: Link resources together to create the Web of data](https://www.w3.org/TR/sdw-bp/#linking). Geodata wordt pas echt onderdeel van het web van data, als het administratieve links bevat naar andere data op het web. 
 
@@ -36,7 +36,7 @@ Tenslotte kun je ook complexe analyses uitvoeren waarbij je baat hebt bij het ge
 
 Er zijn tijdens de High 5 meerdere linksets gemaakt, bijvoorbeeld tussen scholen uit de Duo dataset en BAG verblijfsobjecten en tussen Rijksmonumenten uit de RCE dataset en kadastrale percelen. Dat is, bij een dataset van beperkte omvang, vrij eenvoudig te doen, met behulp van een SPARQL query, als er hiervoor maar aanknopingspunten in de data zijn. Het eerste 'linksetje' verscheen al tijdens de eerste uurtjes van de High 5. 
 
-**MAAR** zulke linksets worden vaak eenmalig gemaakt op basis van een query. Terwijl ze eigenlijk in de data zouden moeten zitten en **beheerd worden**. De data wijzigt immers voordurend. Bovendien zou de kwaliteit van belangrijke links, zeker links van en naar basisregistraties, de verantwoordelijkheid van een data eigenaar moeten zijn. Dit beheer en eigenaarschap is er echter meestal niet, want wie is verantwoordelijk voor de linkset? Wie beheert de links en betaalt daar dus ook voor? 
+Maar zulke linksets worden vaak eenmalig gemaakt op basis van een query. Terwijl ze eigenlijk in de data zouden moeten zitten en beheerd worden. De data wijzigt immers voordurend. Bovendien zou de kwaliteit van belangrijke links, zeker links van en naar basisregistraties, de verantwoordelijkheid van een data eigenaar moeten zijn. Dit beheer en eigenaarschap is er echter meestal niet, want wie is verantwoordelijk voor de linkset? Wie beheert de links en betaalt daar dus ook voor? 
 
 Er zijn tegenwoordig al aardig wat als linked data gepubliceerde (overheids- geo-) datasets in Nederland. *Maar deze data is vrijwel nooit gelinkt aan andere datasets!* Het gaat in andere woorden veelal om vier sterren, geen vijf sterren linked data - de vijfde ster betreft namelijk het gelinkt zijn van de data. 
 
@@ -104,7 +104,7 @@ Het betekent ook dat er links gelegd moeten worden tussen de knooppunten en verb
 
 Alle fysieke objecten én alle knooppunten en verbindingslijnen moeten dus een ID hebben zodat er links naartoe gelegd kunnen worden. Met andere woorden, ze moeten voldoen aan Spatial Data on the Web [Best Practice 1: Use globally unique persistent HTTP URIs for Spatial Things](https://www.w3.org/TR/sdw-bp/#globally-unique-ids).
 
-## Ruimtelijke vragen stellen aan linked data: de stand van zaken
+## Ruimtelijke vragen in linked data nu beter ondersteund
 GeoSPARQL [[geosparql]] is de standaard querytaal voor het ruimtelijk bevragen van linked geodata. Onze ervaringen tijdens deze high 5 lieten zien dat vergeleken met 2 á 3 jaar geleden  de ondersteuning voor GeoSPARQL enorm verbeterd is, zowel wat betreft compliance aan de standaard, als wat betreft performance. Er heeft een verschuiving plaatsgevonden van academische implementaties naar commerciële. 
 
 De meeste triple stores die GeoSPARQL support hebben, bieden: 
@@ -132,7 +132,7 @@ In de geowereld hebben we natuurlijk al lang de mogelijkheid om ruimtelijke vrag
 - De selectievraag wordt beantwoord met GeoSPARQL. Hiermee kun je eenvoudig heterogene data bij elkaar zoeken, ongeacht of dit geodata is of niet. Denk bijvoorbeeld aan een combinatie van BAG panden, bijbehorende wijken en buurten en de CBS statistieken van dit gebied.  
 - De analysevraag wordt na het inladen van deze geselecteerde data vervolgens beantwoord in een GIS.
 
-## Beperking: GeoSPARQL in federatieve queries
+## GeoSPARQL in federatieve queries nog problematisch
 Bij het gebruik van GeoSPARQL is er nog wel een technische beperking. Eén van de sterke punten van linked data is het kunnen bevragen van meerdere data endpoints binnen één query, waardoor je in één stap informatie kunt . Je kunt, simpel gezegd, aan een triple store vragen: 
 
 "Geef mij het BGT object Wegdeel met id 12345 en zoek ook even bij dit andere endpoint met adres xxx op wat er nog meer over dit wegdeel bekend is"
@@ -143,7 +143,7 @@ Om te bewerkstelligen dat vendors dit mogelijk gaan maken, moet er in de GeoSPAR
 
 In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit opgelost door de gewenste query in stukken te knippen met een linkset tussen BGT en GWSW.
 
-## Een adres is niet altijd een locatie
+## Een adres is nog geen locatie
 Bij objecten die een adres hebben, of aan een BAG verblijfsobject gekoppeld zijn, blijkt dit niet altijd te betekenen dat het object zich ook daadwerkelijk op dit adres bevindt. Pas dus altijd goed op hoe je dit interpreteert, en verifieer als dat mogelijk is wat er precies bedoeld wordt met een adreskoppeling. 
 
 Onze aanbeveling is om in DisGeo goed vast te leggen wat er precies wordt bedoeld met adreskoppelingen of andere indirecte koppelingen met een locatie. Betekent dit dat het object zich daadwerkelijk op die locatie bevindt? Of is het niet meer dan een administratieve aanduiding? Ook objecten met een indirecte koppeling aan een locatie kunnen dan in ruimtelijke vragen gebruikt worden, terwijl objecten met een administratieve locatieaanduiding daarbij niet meegenomen worden.

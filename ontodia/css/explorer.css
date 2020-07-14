@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 #onto-container {
-	height: calc(100vh - 160px);
+	height: 100%;
+	border: 1px solid darkgrey;
 	display: flex;
 	margin: 10px;
 	flex-direction: column;
@@ -12,7 +13,7 @@
 }
 
 .content-inner.fullscreen #onto-container {
-	height: calc(100vh - 85px);
+	height: 100%;
 
 }
 

@@ -119,38 +119,39 @@ function onWorkspaceMounted(workspace) {
      * Add public endpoint and refer to our modified dialect
      */
 
-    model.importLayout({
+    /*model.importLayout({
         dataProvider: new Ontodia.SparqlDataProvider({
+                        //endpointUrl: 'https://api.labs.kadaster.nl/datasets/disgeo/incident/services/incident/sparql',
                         endpointUrl: 'https://api.labs.kadaster.nl/datasets/disgeo/disgeo/services/disgeo/sparql',
                         queryMethod: Ontodia.SparqlQueryMethod.GET
                     }, 
                     SparqlDialect),
         });
-        
+    */    
     /**
      * Sample config with multiple endpoints in a composite view.
      */
     
-    /*model.importLayout({
+    model.importLayout({
         dataProvider: new Ontodia.CompositeDataProvider([
             {
                 dataProvider: new Ontodia.SparqlDataProvider({
-                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/woz/services/woz/sparql',
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/disgeo/incident/services/incident/sparql',
                         queryMethod: Ontodia.SparqlQueryMethod.GET
                     }, 
                     SparqlDialect),
-                name: "woz"
+                name: "GMS"
             },
             {
                 dataProvider: new Ontodia.SparqlDataProvider({
-                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/kadaster/bag/services/bag/sparql',
+                        endpointUrl: 'https://api.labs.kadaster.nl/datasets/disgeo/disgeo/services/disgeo/sparql',
                         queryMethod: Ontodia.SparqlQueryMethod.GET
                     }, 
                     SparqlDialect),
-                name: "bag"
+                name: "DIS-GEO"
             }
         ]),
-    });*/
+    });
     
     
 
@@ -182,6 +183,7 @@ const props = {
     languages: [
         {code: 'nl', label: 'Nederlands'},
     ],
+    leftPanelInitiallyOpen: false,
     language: 'nl',
     toolbar:  React.createElement(DisGeoToolbar, { })
 };
@@ -203,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (types.indexOf('http://www.opengis.net/ont/geosparql#Geometry') !== -1 ||
         types.indexOf('http://www.opengis.net/ont/sf#Polygon') !== -1 ||
         types.indexOf('http://www.opengis.net/ont/sf#Point') !== -1 ||
+        types.indexOf('http://www.w3.org/2003/01/geo/wgs84_pos#Point') !== -1 ||
         types.indexOf('http://www.opengis.net/ont/sf#LineString') !== -1 ||
         types.indexOf('http://www.opengis.net/ont/sf#MultiLineString') !== -1 ||
         types.indexOf('http://www.opengis.net/ont/sf#MultiPolygon') !== -1) { 
@@ -240,8 +243,7 @@ function generateSparql(){
             }
             break;
         }
-        //console.log("id:" + id);
-        //parameterNames.set()
+        
     }
     // now go over all the links
     for (const elm in elements){

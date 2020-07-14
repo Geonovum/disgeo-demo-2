@@ -14,7 +14,7 @@ Bijvoorbeeld
 Beide datasets bevatten wel *ruimtelijke relaties* met objecten uit basisregistraties. Door zelf een ruimtelijke vraag te stellen, bijvoorbeeld 'met welk kadastraal perceel overlapt dit rijksmonument?' kun je de informatie wel achterhalen. Maar dit heeft een aantal nadelen. 
 
 - Niet alle gebruikers beschikken over de kennis en/of tooling om dit soort vragen te kunnen stellen. Je hebt hier ofwel GeoSPARQL, ofwel een GIS systeem voor nodig. 
-- Gebruikers kunnen verkeerde conclusies trekken als bv meerdere percelen met een rijksmonument overlappen, of als twee objecten ruimtelijk overlappen maar eigenlijk niet de relatie met elkaar hebben die de gebruiker veronderstelt [voorbeeld] 
+- Gebruikers kunnen verkeerde conclusies trekken als bv meerdere percelen met een rijksmonument overlappen, of als twee objecten ruimtelijk overlappen maar eigenlijk niet de relatie met elkaar hebben die de gebruiker veronderstelt. Bijvoorbeeld kunstwerken die onder provinciale wegen doorlopen maar geen onderdeel maken van het provinciale wegennetwerk, maar alles te maken hebben met het waterschap ter plaatse. Of BGT wegdelen die in het gebied van een waterschap vallen, maar waar dat waterschap niet voor verantwoordelijk is.
 
 Aan de andere kant is het ook niet te doen om alle mogelijke ruimtelijke relaties die er zijn tussen objecten, administratief vast te leggen. Dit zou veel te veel relaties opleveren, waardoor gebruikers door de bomen het bos niet meer zien. 
 

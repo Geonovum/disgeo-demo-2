@@ -12,7 +12,7 @@ Er woedt een grote brand in een pand ergens in Rotterdam. Om de brand zo goed mo
 
 2. **Achteraf** wordt er een impactanalyse gedaan: wat was de geschatte impact van de brand; hoeveel bedrijven moesten ontruimd worden; is er verkeershinder geweest en wt was de economische schade daarvan, hoe lang duurde dat, wat is de milieuschade, etc.
 
-<aside class="note">Dit kun je ook voor elkaar krijgen in een datawarehouse waar allerlei relevante datasets bij elkaar worden gezet. De winst in deze demonstrator zit echter onder de motorkap. De data blijft bij de bron en is verregaand geïntegreerd door middel van linking. </aside>
+<aside class="note">Dit kun je ook voor elkaar krijgen in een datawarehouse waar allerlei relevante datasets bij elkaar worden gezet. De winst in deze demonstrator zit echter onder de motorkap. De data blijft bij de bron en is verregaand geïntegreerd door middel van linking, en daardoor in samenhang te gebruiken. </aside>
 
 ## Brandweer bluswater case Castricum
 
@@ -31,7 +31,7 @@ De andere grote vraag is waar het gebruikte bluswater naar toe gaat. Meestal gaa
 - Waar stroomt het gebruikte bluswater naar toe (denk aan sloten die verbonden zijn met omliggend oppervlaktewater, overstortputten, riool dat water afvoert richting gemaal en waterzuiveringsinstallaties)?
 - Hoeveel water is dit, wat is de capaciteit van de omgeving voor het afvoeren van het water, is er risico op overstromingen?
 
-Deze use case demonstreert het koppelen van eigen, gesloten data aan basisregistratie data. In dit geval zijn dit de beheer openbare ruimte (BOR) objecten, ook wel areaaldata, van de Provincie Noord-Holland, die via een link verbonden zijn aan de corresponderende BGT objecten. 
+Deze use case demonstreert het koppelen van eigen, gesloten data aan basisregistratie data. In dit geval zijn dit de beheer openbare ruimte (BOR) objecten, ook wel areaaldata, van de Provincie Noord-Holland, die via een link verbonden zijn aan de corresponderende BGT objecten, en via de BGT uiteindelijk aan de GWSW rioolnetwerkdata. In de [data story](https://labs.kadaster.nl/stories/high5-imbor/) is vooral de vraag *"waar stroomt het gebruikte bluswater naar toe"* uitgewerkt.
 
 Voordeel van de beschikbaarheid van deze informatie in samenhang:
 - Scenario planning wordt mogelijk ter plekke en op elk moment 

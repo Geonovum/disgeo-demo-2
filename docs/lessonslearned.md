@@ -143,6 +143,15 @@ Om te bewerkstelligen dat vendors dit mogelijk gaan maken, moet er in de GeoSPAR
 
 In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit opgelost door de gewenste query in stukken te knippen met een linkset tussen BGT en GWSW.
 
+## Een adres is niet altijd een locatie
+Bij objecten die een adres hebben, of aan een BAG verblijfsobject gekoppeld zijn, blijkt dit niet altijd te betekenen dat het object zich ook daadwerkelijk op dit adres bevindt. Pas dus altijd goed op hoe je dit interpreteert, en verifieer als dat mogelijk is wat er precies bedoeld wordt met een adreskoppeling. 
+
+Onze aanbeveling is om in DisGeo goed vast te leggen wat er precies wordt bedoeld met adreskoppelingen of andere indirecte koppelingen met een locatie. Betekent dit dat het object zich daadwerkelijk op die locatie bevindt? Of is het niet meer dan een administratieve aanduiding? Ook objecten met een indirecte koppeling aan een locatie kunnen dan in ruimtelijke vragen gebruikt worden, terwijl objecten met een administratieve locatieaanduiding daarbij niet meegenomen worden.
+
+Bovendien zou het een goed idee zijn om de daadwerkelijke locaties van objecten, waar dit van toepassing is, zo veel mogelijk op te nemen, naast eventuele administratieve aanduidingen. Met een herkenbare link uiteraard. 
+
+<aside class='example'>Tijdens de High 5 vonden we voor de Rotterdam use case een Kinderdagverblijf vlak bij de locatie van ons fictieve incident. Althans... volgens het KvK vestigingsadres, dat ook de locatie van het kinderdagverblijf is volgens Google. Echter, volgens de dataset van kinderdagverblijven bevindt dit kinderdagverblijf zich op een andere locatie! Dit bleek te komen doordat daar de bijbehorende stichting geregistreerd staat. Aan de link, met de naam <code>bagid</code>, is dit niet te zien. De kinderen bevinden zich dus daadwerkelijk op de locatie vlak bij de brand, maar als de brandweer was uitgegaan van de kinderdagverblijven dataset, hadden ze dit niet geweten. </aside>
+
 ## Geen vendor lock in!
 Tijdens de High 5, en ook tijdens het schrijven van deze Lessons Learned, waren we al snel zo lekker op dreef dat we ons op dag vier pas deze les realiseerden: 
 

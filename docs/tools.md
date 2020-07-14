@@ -13,11 +13,11 @@ Deze viewer toont een interactief 3D model van Rotterdam van waaruit je met SPAR
 ## Data stories
 [Data stories](https://labs.kadaster.nl/stories/) zijn een medium dat het Kadaster Science team gebruikt om verhalen rondom data te vertellen. Een data story combineert interactieve datavisualisaties met toelichtende tekst. De datavisualisaties zijn altijd gebaseerd op actuele data omdat deze gebruik maken van SPARQL bevragingen. 
 
-- Data story Castricum https://labs.kadaster.nl/stories/high5-imbor/
-- ...
+- Data story [DisGeo data analyse](https://labs.kadaster.nl/stories/disgeo/)
+- Data story [Integratie Linked Data & Geo-data](https://labs.kadaster.nl/stories/high5-imbor/)
 
 ## Analytics tool
-[Voyager](http://vega.github.io/voyager/). Voyager is een js library voor data visualization die met csv output van Sparql query kan werken. Deze wordt in de Rotterdam use case toepast voor de 'analyse achteraf stap
+[Voyager](http://vega.github.io/voyager/). Voyager is een javascript library voor data visualisatie die met CSV output van SPARQL query kan werken. Deze wordt in de Rotterdam use case toepast voor de 'analyse achteraf' stap.
 
 ## Visual SPARQL Builder
 Deze tool maakt het zelf maken van SPARQL queries eenvoudiger met een user interface. 
@@ -27,4 +27,4 @@ In combinatie met Ontodia kan dit een krachtige tool zijn. Als je in Ontodia een
 <aside class="voorbeeld">Je bekijkt in Ontodia alle gegevens van het pand waar een brand is geweest; dit is blijkbaar een interessante combinatie van eigenschappen die ervoor zorgde dat het incident kon plaatsvinden. Dit gegevenspatroon laat je met behulp van de Visual Query Builder los op alle panden in Rotterdam, zodat je vergelijkbare panden kunt vinden en preventieve maatregelen nemen om te voorkomen dat daar een vergelijkbare brand uitbreekt.</aside>
 
 ## Overig 
-Eventueel toetje: KOOPjs in combinatie met ArcGis StoryMaps. Deze laatste kan nu ook met data werken die niet in ArcGis zit, daardoor kan het mogelijk ingezet worden om GIS analyses te doen in de analyse use case (dan hoeft dat niet met GeoSPARQL). 
+Eventueel toetje: KOOPjs in combinatie met ArcGis StoryMaps. Deze laatste kan nu ook met data werken die niet in ArcGis zit, maar die je live uit een SPARQL endpoint haalt. 

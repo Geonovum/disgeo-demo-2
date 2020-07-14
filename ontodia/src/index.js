@@ -92,6 +92,7 @@ function onWorkspaceMounted(workspace) {
                   ?searchLabel bif:contains "\${text}".
                   BIND(0 as ?score)
             `}
+            SparqlDialect.dataLabelProperty= '(rdfs:label|<http://schema.org/name>)',
     /**
      * replace filter type for performance improvements
      */
@@ -182,7 +183,7 @@ const props = {
         {code: 'nl', label: 'Nederlands'},
     ],
     language: 'nl',
-    toolbar:  React.createElement(DisGeoToolbar, { onGenerateSparql: generateSparql })
+    toolbar:  React.createElement(DisGeoToolbar, { })
 };
 
 // Store workspace to be able to access the model later (not clean)
@@ -232,7 +233,7 @@ function generateSparql(){
             if(elements[elm]._data.types[cls]!="http://www.opengis.net/ont/geosparql#Feature" &&
             elements[elm]._data.types[cls]!="http://rdf.histograph.io/PlaceInTime"){
                 let stmt = { subject: { "termType": "Variable", "value":  parameterNames.get(elements[elm]._data.id) },
-                                predicate: { "termType": "NamedNode", "value": "http://www.w3.org/2000/01/rdf-schema#type" },
+                                predicate: { "termType": "NamedNode", "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" },
                                 object: {"termType": "NamedNode", "value": elements[elm]._data.types[cls]}
                             }
                 bgp.add(JSON.stringify(stmt))
@@ -271,8 +272,10 @@ function generateSparql(){
         SparqlQuery.variables.push({"termType": "Variable","value":parm})
     }
     let generator = new SparqlGenerator()
-    console.log(SparqlQuery)
+    
     console.log(generator.stringify(SparqlQuery))
+    var win = window.open("http://localhost:10888?query="+encodeURIComponent(generator.stringify(SparqlQuery)), '_blank');
+    win.focus();
 }
 
 function getQname(uri){

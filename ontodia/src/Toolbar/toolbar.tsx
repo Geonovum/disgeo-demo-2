@@ -40,6 +40,16 @@ export class DisGeoToolbar extends React.Component<DisGeoProps, {}> {
         );
     }
 
+    private renderSparqlButton() {
+        if (!this.props.onGenerateSparql) { return null; }
+        return (
+            <button type='button' className='ontodia-btn ontodia-btn-default'
+                    onClick={this.onGenerateSparql}>
+                    <span title='Example button'>Export Sparql Template</span>
+            </button>
+        );
+    }
+
     private renderPersistAuthoredChangesButton() {
         if (!this.props.onPersistChanges) { return null; }
         return (
@@ -109,10 +119,7 @@ export class DisGeoToolbar extends React.Component<DisGeoProps, {}> {
                             title='Print diagram' onClick={this.props.onPrint}>
                         <span className='fa fa-print' aria-hidden='true'/>
                     </button>
-                    <button type='button' className='ontodia-btn ontodia-btn-default'
-                                    onClick={this.onGenerateSparql}>
-                                <span title='Example button'>Export Sparql Template</span>
-                    </button>
+                    {this.renderSparqlButton()}
                     {this.renderLanguages()}
                 </div>
             </div>

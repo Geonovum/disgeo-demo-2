@@ -96,11 +96,11 @@ var respecConfig =
   //pubDomain: "wp", 	              // White Paper
   pubDomain: "disgeo", 	          // Doorontwikkeling basisregistraties in samenhang
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/Geonovum/disgeo-demo2",
+  github: "https://geonovum.github.io/disgeo-demo-2/",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/Geonovum/disgeo-demo2/issues/",
+  issueBase: "https://github.com/Geonovum/disgeo-demo-2/issues/",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://geonovum.github.io/disgeo-demo2",
+  edDraftURI: "https://geonovum.github.io/disgeo-demo-2",
   //-- license: voor de geldende gebruiksvoorwaarden
   licence: "cc-by-nd",              //-- bronvermelding, geen afgeleide werken (default)
   // licence: "cc0",                //-- Public Domain Dedication

@@ -96,7 +96,7 @@ var respecConfig =
   //pubDomain: "wp", 	              // White Paper
   pubDomain: "disgeo", 	          // Doorontwikkeling basisregistraties in samenhang
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://geonovum.github.io/disgeo-demo-2/",
+  github: "https://github.com/Geonovum/disgeo-demo-2/",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
   issueBase: "https://github.com/Geonovum/disgeo-demo-2/issues/",
   //-- edDraftURI: de URI van de werkversie van het document

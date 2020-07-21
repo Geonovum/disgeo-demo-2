@@ -33,7 +33,7 @@ En daarmee ook
 ## Resultaten
 
 - [Dit ReSpec document](https://geonovum.github.io/disgeo-demo2)
-- Github omgeving voor ontwikkeling: https://github.com/Geonovum/disgeo-demo-2
-- Lab omgeving met data, breed raadpleegbaar [Labs.kadaster.nl, data via data.labs.kadaster.nl]
+- [Github omgeving voor ontwikkeling](https://github.com/Geonovum/disgeo-demo-2)
+- [Lab omgeving](https://labs.kadaster.nl/cases/disgeo-high5) met [data](https://data.labs.kadaster.nl/disgeo/), breed raadpleegbaar: 
 - Eindpresentatie op dinsdag 14 juli: [Innoveren voor DisGeo](https://www.eventbrite.com/e/innoveren-voor-disgeo-eindpresentatie-innovatiesprint-tickets-111946306416)
-- Communicatie-activiteiten, waaronder een filmpje waarin de 3D Rotterdam omgeving wordt gedemonstreerd
+- Communicatie-activiteiten, waaronder een [video waarin de 3D Rotterdam omgeving wordt gedemonstreerd](https://labs.kadaster.nl/assets/videos/disgeo.mp4)

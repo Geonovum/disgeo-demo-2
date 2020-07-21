@@ -50,7 +50,7 @@ Tijdens de High 5 gemaakte linksets:
 - Tussen DUO onderwijsaanbieders en BAG verblijfsobjecten
 - Tussen NHR adresgegevens en BAG nummeraanduidingen
 
-Bij de vorige DISGeo demontrator kwam dit punt ook al naar voren. Zie [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). 
+Bij de vorige DISGeo demontrator kwam dit punt ook al naar voren. Zie [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). Het is noodzakelijk dat niet alleen de objecten uit basisregistraties (en ook andere registraties), maar ook de *links tussen objecten* (relaties) beheerd worden. Zoals een deelnemer aan de einddemo op de laatste dag van de High 5 opmerkte: Het moet voor de gebruiker duidelijk zijn met welke actualiteit hij/zij werkt. Dit geldt ook voor de relaties die er tussen objecten zijn gelegd; deze zijn gevoelig voor verandering als objecten veranderen. In de high 5 liepen we hier niet expliciet tegenaan, maar we nemen dit punt wel mee in ons verdere werk voor DiS Geo. 
 
 ## Uniforme referentie naar basisregistraties
 

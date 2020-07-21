@@ -13,6 +13,7 @@ Datasets waarbij is aangegeven dat ze via Kadaster Labs beschikbaar zijn, zijn t
 BAG data hebben we via https://bag.basisregistraties.overheid.nl/sparql gebruikt. 
 
 Verder hebben we gebruikt:
+- GWSW data van RIONED: https://sparql.gwsw.nl/ https://sparql.gwsw.nl/sparql 
 - RCE data: https://linkeddata.cultureelerfgoed.nl/
 - Basisschool data (DUO): https://lod.onderwijsregistratie.nl/
 - 3D data Rotterdam 

@@ -13,6 +13,7 @@ Onze basisregistraties zijn bij uitstek geschikt om naar te linken. Toch gebeurt
   <li>De Rijksmonumenten dataset zou eigenlijk links tussen rijksmonumenten en kadastrale percelen moeten bevatten, maar deze zijn niet aanwezig.
   </li>
 </ul>
+</aside>
 
 Beide datasets bevatten wel *ruimtelijke relaties* met objecten uit basisregistraties. Door zelf een ruimtelijke vraag te stellen, bijvoorbeeld 'met welk kadastraal perceel overlapt dit rijksmonument?' kun je de informatie wel achterhalen. Maar dit heeft een aantal nadelen. 
 

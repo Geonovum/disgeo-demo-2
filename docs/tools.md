@@ -2,7 +2,7 @@
 De volgende tools zijn ingezet voor de demonstrator.
 
 ## Ontodia
-[Ontodia](http://ontodia.org) is een linked data viewer waarmee je zowel datamodelen als data kunt visualiseren. Deze tool maakt mooi zichtbaar hoe je door samenhangende data heen kan browsen. Bijzonder hierbij is dat de data niet op één plek hoeft te staan. Je kunt, als er maar links tussen datasets aangebracht zijn, naadloos van object naar object browsen ongeacht in welke datasets deze objecten staan. 
+[Ontodia](https://metaphacts.com/ontodia) is een linked data viewer waarmee je zowel datamodelen als data kunt visualiseren. Deze tool maakt mooi zichtbaar hoe je door samenhangende data heen kan browsen. Bijzonder hierbij is dat de data niet op één plek hoeft te staan. Je kunt, als er maar links tussen datasets aangebracht zijn, naadloos van object naar object browsen ongeacht in welke datasets deze objecten staan. 
 
 Je kunt [hier](https://labs.kadaster.nl/demonstrators/graph-browser/) de in de demonstrator gebruikte data bekijken in Ontodia. 
 

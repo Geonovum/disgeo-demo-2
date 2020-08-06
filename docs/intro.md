@@ -36,4 +36,5 @@ En daarmee ook
 - [Github omgeving voor ontwikkeling](https://github.com/Geonovum/disgeo-demo-2)
 - [Lab omgeving](https://labs.kadaster.nl/cases/disgeo-high5) met [data](https://data.labs.kadaster.nl/disgeo/), breed raadpleegbaar: 
 - Eindpresentatie op dinsdag 14 juli: [Innoveren voor DisGeo](https://www.eventbrite.com/e/innoveren-voor-disgeo-eindpresentatie-innovatiesprint-tickets-111946306416)
+- link naar de video's van het webinar: [Webinar](https://www.geonovum.nl/themas/linked-data/webinar-dis-geo)
 - Communicatie-activiteiten, waaronder een [video waarin de 3D Rotterdam omgeving wordt gedemonstreerd](https://labs.kadaster.nl/assets/videos/disgeo.mp4)

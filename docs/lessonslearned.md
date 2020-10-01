@@ -27,6 +27,15 @@ De vraag is dan: welke ruimtelijke links ga je administratief vastleggen, en wel
 
 Om in de demonstrator met de datasets in samenhang te kunnen werken, zijn er tijdens de High 5 ad hoc linksets (koppeltabellen) tussen de data gemaakt. Meer hierover in [de geleerde les over linksets](#linksetjes-snel-gemaakt-maar-niet-beheerd).
 
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Denk binnen het DISGeo overleg goed na over welke ruimtelijke links vast gelegd moeten worden in de data.
+Daarnaast moet er meer nadruk gelegd worden op het vastleggen van reeds bestaande registraties
+
+</aside>
+
 ## Wat kan je dan met die links
 
 Op het moment dat die links tussen individuele objecten uit verschillende registraties er zijn, wordt werken met de data veel eenvoudiger. Dit laat de demonstrator zien. 
@@ -36,6 +45,16 @@ Je kunt bijvoorbeeld eenvoudig door de data browsen. We kunnen nu met behulp van
 Je kunt op basis van deze gelinkte registraties ook eenvoudig rapportjes maken uit de data. Via de Ontodia browser kun je ook, als je een interessant data patroon bij elkaar hebt geklikt, daar een query van maken, die een beetje aanpassen in een query bouwtool en het resultaat vervolgens op een dashboard laten zien. 
 
 Tenslotte kun je ook complexe analyses uitvoeren waarbij je baat hebt bij het gekoppeld zijn van de data. 
+
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Binnen DISGeo wordt nu vooral nadruk gelegd op de harmonisatie van de Basis registraties door het aanbrengen van links en vastleggen van de Semantiek.
+Vanuit een beleids oogpunt is het natuurlijk essentieel dat de informatie die aangeboden wordt juist is, goed aansluit en duidelijk is.
+Echter zou er voor adoptie ook veel meer aandacht moeten zijn voor de voordelen die het biedt voor de afnemer wanneer deze met dezelfde technieke werkt.
+
+</aside>
 
 ## Linksetjes... snel gemaakt, maar niet beheerd
 
@@ -56,6 +75,15 @@ Tijdens de High 5 gemaakte linksets:
 - Tussen NHR adresgegevens en BAG nummeraanduidingen
 
 Bij de vorige DISGeo demontrator kwam dit punt ook al naar voren: zie de uitleg in [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). Het is noodzakelijk dat niet alleen de objecten uit basisregistraties (en ook andere registraties), maar ook de *links tussen objecten* (relaties) beheerd worden. Zoals een toeschouwer van de einddemo op de laatste dag van de High 5 opmerkte: Het moet voor de gebruiker duidelijk zijn met welke actualiteit hij/zij werkt. Dit geldt ook voor de relaties die er tussen objecten zijn gelegd, want deze zijn gevoelig voor verandering als objecten veranderen. In de high 5 liepen we niet expliciet tegen problemen met actualiteit aan, maar we nemen dit punt wel mee in ons verdere werk voor DiS Geo. 
+
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Zoals reeds in de eerdere demonstrator gemeld, [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak) verdient veel meer aandacht. Ook in deze demonstrator is de noodzaak daarvan weer duidelijk zichtbaar geworden.
+
+</aside>
+
 
 ## Uniforme referentie naar basisregistraties
 
@@ -87,6 +115,15 @@ Een gestandaardiseerde `disgeo-object-ref` staat niet in de weg van het gebruik 
   - als het object niet exact hetzelfde is, maar wel gerelateerd, andere semantische relaties te gebruiken om de relatie tussen de objecten te beschrijven.
 </aside>
 
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Om vanuit andere dan basis registraties een relatie naar een basis registratie uit te drukken zou een gestandariseerde verwijzing veel duidelijkheid bieden.
+Dit helpt om duidelijk te maken dat de links binnen een dataset verwijzen naar 1 van de basis registraties waardoor de samenhang beter zichtbaar wordt.
+
+</aside>
+
 ## Open en gesloten linked data
 Hoe koppel je open en gesloten knowledge graphs aan elkaar? Afhankelijk van wat je linked data opslagsysteem (oftwel triple store) kan is het tegenwoordig al mogelijk om ofwel op graph (dataset) niveau, ofwel op objectniveau in te stellen op basis van welke voorwaarden gebruikers de data mogen ontvangen. 
 
@@ -95,6 +132,14 @@ Twee belangrijke use cases hiervoor zijn:
 - Als de data privacygevoelig is. Je wilt dan een gebruiker alleen toegang geven tot persoonlijke informatie als via bijvoorbeeld Digid geverifiëerd is dat die persoon die data mag zien. 
 
 In de demonstrator hebben we dit niet uitgebreid laten zien, juist omdat het al eenvoudig is om dit te doen. Het is wel een belangrijk punt om je te realiseren: linked data betekent niet per sé linked OPEN data; en gesloten en open linked data kunnen aan elkaar gekoppeld worden waarbij authenticatie en authorisatie van de gesloten data met standaard web technieken eenvoudig en goed geregeld zijn. 
+
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Hoewel het overgrote deel van de data binnen DISGeo open data is, biedt juist de integratie met gesloten linked data enorme voordelen, hier moet meer en nadrukkelijker aandacht aan besteed worden.
+
+</aside>
 
 ## Links tussen netwerken en fysieke objecten
 
@@ -107,6 +152,14 @@ Wij trekken hieruit de conclusie dat DISGeo de mogelijkheid moet bieden om netwe
 Het betekent ook dat er links gelegd moeten worden tussen de knooppunten en verbindingslijnen in het netwerk enerzijds, en de fysieke objecten die het netwerk realiseren in de fysieke werkelijkheid anderszijds. Bijvoorbeeld: een link tussen het BGT waterdeel dat een deel van een kanaal representeert en de corresponderende verbindingslijn in het waternetwerk.
 
 Alle fysieke objecten én alle knooppunten en verbindingslijnen moeten dus een ID hebben zodat er links naartoe gelegd kunnen worden. Met andere woorden, ze moeten voldoen aan Spatial Data on the Web [Best Practice 1: Use globally unique persistent HTTP URIs for Spatial Things](https://www.w3.org/TR/sdw-bp/#globally-unique-ids).
+
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Zorg voor goede aansluiting bij reeds bestaande standaarden en best practices voor het oplossen van een aantal van de uitdagingen die we in de demonstrator hebben gezien.
+
+</aside>
 
 ## Ruimtelijke vragen in linked data nu beter ondersteund
 GeoSPARQL [[geosparql]] is de standaard querytaal voor het ruimtelijk bevragen van linked geodata. Onze ervaringen tijdens deze high 5 lieten zien dat vergeleken met 2 á 3 jaar geleden  de ondersteuning voor GeoSPARQL enorm verbeterd is, zowel wat betreft compliance aan de standaard, als wat betreft performance. Er heeft een verschuiving plaatsgevonden van academische implementaties naar commerciële. 
@@ -131,10 +184,26 @@ product    | compliance | performance
 
 De performance van GeoSPARQL-ondersteunende triple stores kan getest worden met deze [dataset for benchmarking GeoSPARQL](https://data.labs.kadaster.nl/geosparql-test). 
 
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Er zijn de afgelopen tijd veel verbeteringen doorgevoerd op het gebied van ruimtelijke Link Data in de diverse producten. Echter blijven een aantal zaken in de diverse standaarden redelijk vaag. Er wordt gewerkt aan het bijwerken van die standaarden, DISGeo zou deze activiteiten moeten ondersteunen.
+
+</aside>
+
 ## Wanneer GeoSPARQL, wanneer GIS
 In de geowereld hebben we natuurlijk al lang de mogelijkheid om ruimtelijke vragen te stellen. Maar gegeven de beschikbaarheid van geo linked data, wanneer is het dan beter om GeoSPARQL te gebruiken, en wanneer een GIS? Je kunt je dit voorstellen als een tweetrapsraket. Vaak is er, om een ruimtelijk probleem op te lossen, eerst een selectie nodig van allerlei relevante data in een bepaald gebied. Data, die in verschillende systemen staat. Vervolgens wordt op die dataverzameling nadere analyse gedaan om de gestelde vraag te beantwoorden. In zo'n geval spelen zowel GeoSPARQL als GIS een cruciale rol: 
 - De selectievraag wordt beantwoord met GeoSPARQL. Hiermee kun je eenvoudig heterogene data bij elkaar zoeken, uit verschillende registraties of systemen, en ongeacht of dit geodata is of niet. Denk bijvoorbeeld aan een combinatie van BAG panden, bijbehorende wijken en buurten en de CBS statistieken van dit gebied.  
 - De analysevraag wordt na het inladen van deze geselecteerde data vervolgens beantwoord in een GIS.
+
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Het moet duidelijker gemaakt worden dat GIS en Linked Data complementair zijn en ieder op hun eigen vlak de voorkeur verdienen.
+
+</aside>
 
 ## GeoSPARQL in federatieve queries
 Bij het gebruik van GeoSPARQL is er nog wel een technische beperking. Eén van de sterke punten van linked data is het kunnen bevragen van meerdere data endpoints binnen één query, waardoor je in één stap informatie kunt halen uit meerdere registraties. Je kunt, simpel gezegd, aan een triple store vragen: 
@@ -147,6 +216,14 @@ Om te bewerkstelligen dat vendors dit mogelijk gaan maken, moet er in de GeoSPAR
 
 In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit opgelost door de gewenste query in stukken te knippen met een linkset tussen BGT en GWSW.
 
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Ruimtelijke vragen over verschillende Linked Data bronnen wordt nog niet goed ondersteunt, dit is iets wat in de standaarden opgelost moet worden aangezien hier niet eerder use cases voor waren. DISGeo zou een mooie Use Case aan kunnen bieden hiervoor.
+
+</aside>
+
 ## Een adres is nog geen locatie
 Bij objecten die een adres hebben, of aan een BAG verblijfsobject gekoppeld zijn, blijkt dit niet altijd te betekenen dat het object zich ook daadwerkelijk op dit adres bevindt. Pas dus altijd goed op hoe je dit interpreteert, en verifieer zo goed mogelijk wat er precies bedoeld wordt met een adreskoppeling. 
 
@@ -156,6 +233,13 @@ Onze aanbeveling is om in DISGeo goed vast te leggen wat er precies wordt bedoel
 
 Bovendien zou het zinnige verrijking zijn om de daadwerkelijke locaties van objecten, waar dit van toepassing is, zo veel mogelijk op te nemen, naast eventuele administratieve aanduidingen zoals een postadres. Met een herkenbare link uiteraard. 
 
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Verwijzingen naar identifier in de basis registraties volgen niet altijd de juiste semantiek, dit heeft
+
+</aside>
 
 ## Geen vendor lock in!
 Tijdens de High 5, en ook tijdens het schrijven van deze Lessons Learned, waren we al snel zo lekker op dreef dat we ons op dag vier pas deze les realiseerden: 
@@ -163,6 +247,14 @@ Tijdens de High 5, en ook tijdens het schrijven van deze Lessons Learned, waren 
 We hadden helemaal geen afspraken vooraf gemaakt over de te gebruiken tooling en versies daarvan. En tóch werkte alles. 
 
 Het feit dat we linked data standaarden gebruikten, en dat willekeurig welke tooling deze standaarden blijkbaar zonder ambiguiteiten ondersteunt, maakte het mogelijk dat we gewoon aan de slag konden met de toolset van onze voorkeur en daarbij geen enkel interoperabiliteitsprobleem ondervonden hebben. Dit is een belangrjike constatering, want hoewel het altijd de belofte van datastandaarden is geweest dat er interoperabiliteit mee bereikt wordt, werd dat in de praktijk nooit volledig waargemaakt. In dit geval wel!
+
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+De focus moet naast het verbeteren van de samenhang van basis registraties ook liggen op de voordelen van het gebruik van openstandaarden. De Linked Data aangeboden binnen DISGeo kan met een grote verscheidenheid aan commerciele en Open Source tools gebruikt worden. Dit betekend dat organisaties die gebruik maken van de DISGeo infrastructuur niet een specifieke tool of versie opgedrongen krijgen.
+
+</aside>
 
 ## Samenhang werkt echt
 Door het op de juiste manier doorvoeren van de links, in de tijdens de High 5 gerealiseerde linked data variant van de basisregistraties (de knowledge graph), is de waarde van de links direct zichtbaar te maken. Met een combinatie van de juiste [tooling](http://ontodia.org) en de juiste standaarden hebben we gezien dat bevragen van basisregistraties over hun silo grenzen heen prima werkt. De relaties tussen objectinstanties in bijvoorbeeld de WOZ, BAG en BRK zijn direct inzichtelijk te maken zonder de noodzaak om alle data in één systeem te laden.
@@ -174,6 +266,14 @@ Zoals genoemd in één van de lessons learned, [Uniforme referentie naar basisre
 <aside class='example'>Als een interne registratie gerelateerd is aan een verblijfsobject maar de link naar de basisregistratie wijst naar een pand is dat een indicatie van een data kwaliteits probleem.</aside>
 
 <aside class='note'>De samenhang op deze manier is voornamelijk bruikbaar voor het verkennen van informatie van enkele instanties, grootschalige analyse is niet zonder meer mogelijk.</aside>
+
+### *Overwegingen voor vervolg*
+
+<aside class='advisement'>
+
+Op dit moment ligt de nadruk van de samenhang vooral op de integriteit van de basis registraties, deze demonstrator heeft laten zien dat de samenhang ook veel voordelen biedt voor het verkennen van relaties, iets wat voor een eindgebruiker een stuk interessanter is. Deze gaat er namelijk impliciet van uit dat de data in DISGeo in de basis van goede kwaliteit is.
+
+</aside>
 
 ## Hoe nu verder
 Tenslotte plaatsen we bij het succes van deze High 5 de volgende kanttekening. De deelnemers aan deze vijf dagen waren, zoals één van hen zei, waren de 'crème de la crème' van de Nederlandse linked data community. We gingen uit van een te realiseren 'ideaalplaatje', dat we met behulp van linked data standaarden en tooling hebben weten te realiseren. Alles wat we bereikt hebben, is mede te danken aan de expertise die er deze week aan tafel zat. Dit laat zien dat de mogelijkheden bijna onbegrensd zijn, en dat met behulp van linked data de DISGeo ambities te realiseren zijn bij de huidige stand van de techniek, mits er voldoende kennis aanwezig is. 

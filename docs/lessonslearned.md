@@ -27,9 +27,9 @@ De vraag is dan: welke ruimtelijke links ga je administratief vastleggen, en wel
 
 Om in de demonstrator met de datasets in samenhang te kunnen werken, zijn er tijdens de High 5 ad hoc linksets (koppeltabellen) tussen de data gemaakt. Meer hierover in [de geleerde les over linksets](#linksetjes-snel-gemaakt-maar-niet-beheerd).
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Denk binnen DISGeo goed na over welke ruimtelijke relaties vastgelegd moeten worden in de data. Daarnaast moet er meer nadruk gelegd worden op het vastleggen van reeds bestaande relaties.
 
@@ -45,9 +45,9 @@ Je kunt op basis van deze gelinkte registraties ook eenvoudig rapportjes maken u
 
 Tenslotte kun je ook complexe analyses uitvoeren waarbij je baat hebt bij het gekoppeld zijn van de data. 
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Binnen DiSGeo wordt tot nu toe vooral nadruk gelegd op de harmonisatie van de huidige geobasisregistraties door het aanbrengen van relaties, semantische harmonisatie en het vastleggen van de semantiek tussen met name BGT, BRT, BAG, en WOZ. Vanuit een beleidsoogpunt is het natuurlijk essentieel dat de informatie die aangeboden wordt juist is, goed aansluit en duidelijk is.
 
@@ -77,9 +77,9 @@ Tijdens de High 5 gemaakte linksets:
 
 Bij de vorige DISGeo demontrator kwam dit punt ook al naar voren: zie de uitleg in [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). Het is noodzakelijk dat niet alleen de objecten uit basisregistraties (en ook andere registraties), maar ook de *links tussen objecten* (relaties) beheerd worden. Zoals een toeschouwer van de einddemo op de laatste dag van de High 5 opmerkte: Het moet voor de gebruiker duidelijk zijn met welke actualiteit hij/zij werkt. Dit geldt ook voor de relaties die er tussen objecten zijn gelegd, want deze zijn gevoelig voor verandering als objecten veranderen. In de high 5 liepen we niet expliciet tegen problemen met actualiteit aan, maar we nemen dit punt wel mee in ons verdere werk voor DiS Geo. 
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Zoals reeds in de eerdere demonstrator gemeld, [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak) verdient veel meer aandacht. Ook in deze demonstrator is de noodzaak daarvan weer duidelijk zichtbaar geworden.
 
@@ -118,9 +118,9 @@ Een gestandaardiseerde `disgeo-object-ref` staat niet in de weg van het gebruik 
   - als het object niet exact hetzelfde is, maar wel gerelateerd, andere semantische relaties te gebruiken om de relatie tussen de objecten te beschrijven.
 </aside>
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Om vanuit andere dan basisregistraties een relatie naar een basisregistratie uit te drukken zou een gestandariseerde verwijzing veel duidelijkheid bieden. Dit helpt om duidelijk te maken dat de links binnen een dataset verwijzen naar 1 van de basisregistraties waardoor de samenhang beter zichtbaar wordt.
 
@@ -137,9 +137,9 @@ Twee belangrijke use cases hiervoor zijn:
 
 In de demonstrator hebben we dit niet uitgebreid laten zien, juist omdat het al eenvoudig is om dit te doen. Het is wel een belangrijk punt om je te realiseren: linked data betekent niet per sé linked OPEN data; en gesloten en open linked data kunnen aan elkaar gekoppeld worden waarbij authenticatie en authorisatie van de gesloten data met standaard web technieken eenvoudig en goed geregeld zijn. 
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Linked data betekent niet per sé linked OPEN data; gesloten en open linked data kunnen aan elkaar gekoppeld. Voor een eigenaar van gesloten linked data biedt dit veel voordeel, zo kan een provincie bijvoorbeeld de open data van DisGeo als uitgangspunt nemen en daarmee de eigen, gesloten beheerdata verrijken. Dit punt moet goed onder de aandacht gebracht worden van het werkveld.
 
@@ -157,9 +157,9 @@ Het betekent ook dat er links gelegd moeten worden tussen de knooppunten en verb
 
 Alle fysieke objecten én alle knooppunten en verbindingslijnen moeten dus een ID hebben zodat er links naartoe gelegd kunnen worden. Met andere woorden, ze moeten voldoen aan Spatial Data on the Web [Best Practice 1: Use globally unique persistent HTTP URIs for Spatial Things](https://www.w3.org/TR/sdw-bp/#globally-unique-ids).
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Neem een algemeen netwerkmodel op in DisGeo; probeer dit te laten voldoen aan en/of aansluiten op de nieuwe NEN 2660. Zorg dat fysieke objecten en netwerkobjecten gekoppeld kunnen worden; sluit hiervoor aan op internationale best practices.
 
@@ -188,9 +188,9 @@ product    | compliance | performance
 
 De performance van GeoSPARQL-ondersteunende triple stores kan getest worden met deze [dataset for benchmarking GeoSPARQL](https://data.labs.kadaster.nl/geosparql-test). 
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Er zijn de afgelopen tijd veel verbeteringen doorgevoerd wat betreft de ondersteuning van ruimtelijke Linked Data in de diverse producten. Echter is een aantal zaken in de diverse standaarden, waaronder GeoSPARQL, nog onvoldoende uitgewerkt. Voor DisGeo zijn deze standaarden van belang en DiSGeo zou om die reden internationale ontwikkelingen voor het verbeteren ervan, die momenteel gaande zijn, moeten ondersteunen. Dit kan bijvoorbeeld door vanuit het DisGeo programma in werkgroepen deel te nemen of experimenten te doen met in ontwikkeling zijnde standaarden.
 
@@ -203,9 +203,9 @@ In de geowereld hebben we natuurlijk al lang de mogelijkheid om ruimtelijke vrag
 
 Met andere woorden, geo-linked data en GIS zijn complementair. 
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 De realisatie, dat GIS en geo-Linked Data complementair zijn en ieder op hun eigen vlak de voorkeur verdienen, is een belangrijk inzicht en moet aan een breder publiek duidelijk gemaakt worden.
 
@@ -222,9 +222,9 @@ Om te bewerkstelligen dat vendors dit mogelijk gaan maken, moet er in de GeoSPAR
 
 In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit opgelost door de gewenste query in stukken te knippen met een linkset tussen BGT en GWSW.
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Het stellen van ruimtelijke vragen over verschillende Linked Data bronnen heen wordt nog niet goed ondersteund. Dit is iets wat in de standaarden opgelost moet worden aangezien hier niet eerder use cases voor waren. DiSGeo zou een mooie Use Case aan kunnen bieden hiervoor. Dit sluit aan bij de [eerdere aanbeveling](#ruimtelijke-vragen-in-linked-data-nu-beter-ondersteund) over het bijdragen aan ontwikkelingen in de relevante internationale standaarden.
 
@@ -239,9 +239,9 @@ Onze aanbeveling is om in DISGeo goed vast te leggen wat er precies wordt bedoel
 
 Bovendien zou het zinnige verrijking zijn om de daadwerkelijke locaties van objecten, waar dit van toepassing is, zo veel mogelijk op te nemen, naast eventuele administratieve aanduidingen zoals een postadres. Met een herkenbare link uiteraard. 
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Verwijzingen naar identifiers van bijvoorbeeld adressen in de basisregistraties hebben niet altijd de juiste of zelfs maar een duidelijke betekenis. Daardoor is het in ruimtelijke vragen niet goed mogelijk om objecten die relevant zijn in de context van de vraag, te scheiden van objecten die dat niet zijn. Denk bijvoorbeeld aan het kinderdagverblijf dat op basis van het vestigingsadres (waar de administratie zich bevindt, maar geen kinderen opgevangen worden) terugkomt in een zoekvraag naar locaties waar kinderen opgevangen kunnen worden.
 
@@ -256,9 +256,9 @@ We hadden helemaal geen afspraken vooraf gemaakt over de te gebruiken tooling en
 
 Het feit dat we linked data standaarden gebruikten, en dat willekeurig welke tooling deze standaarden blijkbaar zonder ambiguiteiten ondersteunt, maakte het mogelijk dat we gewoon aan de slag konden met de toolset van onze voorkeur en daarbij geen enkel interoperabiliteitsprobleem ondervonden hebben. Dit is een belangrjike constatering, want hoewel het altijd de belofte van datastandaarden is geweest dat er interoperabiliteit mee bereikt wordt, werd dat in de praktijk nooit volledig waargemaakt. In dit geval wel!
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 De focus moet naast het verbeteren van de samenhang van basisregistraties ook liggen op de voordelen van het gebruik van open standaarden. De Linked Data aangeboden binnen DiSGeo kan met een grote verscheidenheid aan commerciële en open source tools gebruikt worden. Dit betekent dat organisaties die gebruik maken van de DiSGeo infrastructuur niet een specifieke tool of versie opgedrongen krijgen.
 
@@ -279,9 +279,9 @@ Zoals genoemd in één van de lessons learned, [Uniforme referentie naar basisre
 
 <aside class='note'>De samenhang op deze manier is voornamelijk bruikbaar voor het verkennen van informatie van enkele instanties, grootschalige analyse is niet zonder meer mogelijk.</aside>
 
-### *Overwegingen voor vervolg*
-
 <aside class='advisement'>
+
+**Overwegingen voor vervolg**
 
 Op dit moment ligt de nadruk van de samenhang vooral op de integriteit van de geobasisregistraties die in eerste instantie deel uitmaken van DisGeo; deze demonstrator heeft laten zien dat de samenhang ook veel voordelen biedt voor het verkennen van relaties, iets wat voor een eindgebruiker een stuk interessanter is. Deze gaat er namelijk impliciet van uit - en mag hier ook van uit gaan - dat de data in DiSGeo in de basis van goede kwaliteit is.
 

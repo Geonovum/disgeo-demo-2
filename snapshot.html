@@ -338,15 +338,43 @@ h6>a.self-link::before {
     display: none;
   }
 }
-</style><link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/GN-WV.css"><link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico"><script id="initialUserConfig" type="application/json">{
-  "specStatus": "GN-WV",
+</style><link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/GN-DEF.css"><link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico"><script id="initialUserConfig" type="application/json">{
+  "specStatus": "GN-DEF",
   "specType": "AL",
   "format": "markdown",
+  "publishDate": "2021-01-07",
   "editors": [
     {
       "name": "Linda van den Brink",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Bart van Leeuwen",
+      "company": "Netage",
+      "companyURL": "https://netage.nl/"
+    },
+    {
+      "name": "Erwin Folmer",
+      "company": "Kadaster",
+      "companyURL": "https://www.kadaster.nl"
+    },
+    {
+      "name": "Nicky van Oorschot",
+      "company": "Netage",
+      "companyURL": "https://netage.nl/"
+    },
+    {
+      "name": "Niels Hoffmann",
+      "company": "Provincie Noord-Holland",
+      "companyURL": "https://www.noord-holland.nl"
+    },
+    {
+      "name": "Pano Maria",
+      "company": "Skemu",
+      "companyURL": "https://skemu.com"
     }
   ],
   "shortName": "dll2",
@@ -378,8 +406,8 @@ h6>a.self-link::before {
       "publisher": "International Organization for Standardization"
     }
   },
-  "publishISODate": "2020-12-21T00:00:00.000Z",
-  "generatedSubtitle": "Werkversie 21 december 2020"
+  "publishISODate": "2021-01-07T00:00:00.000Z",
+  "generatedSubtitle": "Vastgestelde versie 07 januari 2021"
 }</script><meta name="description" content="Dit document beschrijft de geleerde lessen die zijn opgedaan tijdens het in 5 dagen ontwikkelen van een demonstrator voor DisGeo. De DisGeo Demo fase 2 toont wat Linked Data voor DisGeo kan betekenen, en wat de tekortkomingen zijn. De nadruk ligt daarbij op integrale gebruiksvragen over datasets heen, gebaseerd op samenhang tussen datasets."><script type="application/ld+json">{
   "@context": [
     "http://schema.org",
@@ -401,14 +429,14 @@ h6>a.self-link::before {
       }
     }
   ],
-  "id": "https://geonovum.github.io/disgeo-demo-2",
+  "id": "https://docs.geostandaarden.nl/disgeo/def-al-dll2-20210107/",
   "type": [
     "TechArticle"
   ],
   "name": "DisGeo Demo II Lessons Learned",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "datePublished": "2020-12-21",
+  "datePublished": "2021-01-07",
   "copyrightHolder": {
     "name": "Geonovum",
     "url": "https://www.geonovum.nl/"
@@ -423,6 +451,48 @@ h6>a.self-link::before {
       "worksFor": {
         "name": "Geonovum",
         "url": "https://www.geonovum.nl"
+      }
+    }
+  ],
+  "contributor": [
+    {
+      "type": "Person",
+      "name": "Bart van Leeuwen",
+      "worksFor": {
+        "name": "Netage",
+        "url": "https://netage.nl/"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Erwin Folmer",
+      "worksFor": {
+        "name": "Kadaster",
+        "url": "https://www.kadaster.nl"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Nicky van Oorschot",
+      "worksFor": {
+        "name": "Netage",
+        "url": "https://netage.nl/"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Niels Hoffmann",
+      "worksFor": {
+        "name": "Provincie Noord-Holland",
+        "url": "https://www.noord-holland.nl"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Pano Maria",
+      "worksFor": {
+        "name": "Skemu",
+        "url": "https://skemu.com"
       }
     }
   ],
@@ -454,20 +524,20 @@ h6>a.self-link::before {
   ]
 }</script></head>
     <!-- HTML-Body -------------------------------------------------------------------------------->
-    <body class="h-entry toc-inline"><div class="head">
+    <body class="h-entry"><div class="head">
   <a href="https://www.geonovum.nl/" class="logo"><img id="Geonovum" alt="Geonovum" width="132" height="67" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg"></a>
   <h1 class="title p-name" id="title">DisGeo Demo II Lessons Learned</h1>
   
   <h2>Geonovum Algemeen<br>
-  Werkversie <time class="dt-published" datetime="2020-12-21">21 december 2020</time></h2>
+  Vastgestelde versie <time class="dt-published" datetime="2021-01-07">07 januari 2021</time></h2>
   <dl>
-    <dt>Deze versie:</dt><dd><a class="u-url" href="https://geonovum.github.io/disgeo-demo-2">https://geonovum.github.io/disgeo-demo-2</a></dd><dt>Laatst gepubliceerde versie:</dt><dd>geen</dd>
+    <dt>Deze versie:</dt><dd><a class="u-url" href="https://docs.geostandaarden.nl/disgeo/def-al-dll2-20210107/">https://docs.geostandaarden.nl/disgeo/def-al-dll2-20210107/</a></dd><dt>Laatst gepubliceerde versie:</dt><dd><a href="https://docs.geostandaarden.nl/disgeo/dll2/">https://docs.geostandaarden.nl/disgeo/dll2/</a></dd>
     
     
     <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/disgeo-demo-2">https://geonovum.github.io/disgeo-demo-2</a></dd>
     <dt>Redacteur:</dt>
     <dd class="p-author h-card vcard"><span class="p-name fn">Linda van den Brink</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl">Geonovum</a></dd>
-    
+    <dt>Auteurs:</dt><dd class="p-author h-card vcard"><span class="p-name fn">Bart van Leeuwen</span>, <a class="p-org org h-org h-card" href="https://netage.nl/">Netage</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Erwin Folmer</span>, <a class="p-org org h-org h-card" href="https://www.kadaster.nl">Kadaster</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Nicky van Oorschot</span>, <a class="p-org org h-org h-card" href="https://netage.nl/">Netage</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Niels Hoffmann</span>, <a class="p-org org h-org h-card" href="https://www.noord-holland.nl">Provincie Noord-Holland</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Pano Maria</span>, <a class="p-org org h-org h-card" href="https://skemu.com">Skemu</a></dd>
     <dt>Doe mee:</dt><dd>
       <a href="https://github.com/Geonovum/disgeo-demo-2/">GitHub Geonovum/disgeo-demo-2</a>
     </dd><dd>
@@ -494,8 +564,7 @@ h6>a.self-link::before {
           </dd>
         </dl>
   <hr title="Separator for header">
-</div>
-<section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document beschrijft de geleerde lessen die zijn opgedaan tijdens het in 5 dagen ontwikkelen van een demonstrator voor DisGeo. De DisGeo Demo fase 2 toont wat Linked Data voor DisGeo kan betekenen, en wat de tekortkomingen zijn. De nadruk ligt daarbij op integrale gebruiksvragen over datasets heen, gebaseerd op samenhang tussen datasets.</p><p>De belangrijkste conclusies zijn:</p><ul>
+</div><section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document beschrijft de geleerde lessen die zijn opgedaan tijdens het in 5 dagen ontwikkelen van een demonstrator voor DisGeo. De DisGeo Demo fase 2 toont wat Linked Data voor DisGeo kan betekenen, en wat de tekortkomingen zijn. De nadruk ligt daarbij op integrale gebruiksvragen over datasets heen, gebaseerd op samenhang tussen datasets.</p><p>De belangrijkste conclusies zijn:</p><ul>
 <li>Linked data is onmisbaar bij het realiseren van de DisGeo ambitie om data in samenhang te kunnen gebruiken.
 </li>
 <li>Linked data is er klaar voor. Er zijn geen grote technische belemmeringen meer. Ondersteuning in de markt voor geografische linked data is goed.</li>
@@ -504,8 +573,8 @@ h6>a.self-link::before {
     <em>Deze paragraaf beschrijft de status van dit document ten tijde van publicatie. Het is mogelijk dat er actuelere versies van dit document bestaan. Een lijst van Geonovum publicaties en de laatste gepubliceerde versie van dit document zijn te vinden op <a href="https://www.geonovum.nl/geo-standaarden/alle-standaarden">https://www.geonovum.nl/geo-standaarden/alle-standaarden</a>.</em>
   </p><p>
 
+    Dit is de definitieve versie van de algemeen. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.
 
-  Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.
 
 
 

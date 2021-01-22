@@ -23,7 +23,7 @@ Het tweede nadeel heeft te maken met interpretatie van de data. Gebruikers kunne
 
 Aan de andere kant is het ook niet te doen om alle mogelijke ruimtelijke relaties die er zijn tussen objecten, administratief vast te leggen. Dit zou veel te veel relaties opleveren, waardoor gebruikers door de bomen het bos niet meer zien. 
 
-De vraag is dan: welke ruimtelijke links ga je administratief vastleggen, en welke niet? Binnen DISGeo moet hierover nagedacht worden. 
+De vraag is dan: welke ruimtelijke links ga je administratief vastleggen, en welke niet? Binnen DiSGeo moet hierover nagedacht worden. 
 
 Om in de demonstrator met de datasets in samenhang te kunnen werken, zijn er tijdens de High 5 ad hoc linksets (koppeltabellen) tussen de data gemaakt. Meer hierover in [de geleerde les over linksets](#linksetjes-snel-gemaakt-maar-niet-beheerd).
 
@@ -51,7 +51,7 @@ Tenslotte kun je ook complexe analyses uitvoeren waarbij je baat hebt bij het ge
 
 Binnen DiSGeo wordt tot nu toe vooral nadruk gelegd op de harmonisatie van de huidige geobasisregistraties door het aanbrengen van relaties, semantische harmonisatie en het vastleggen van de semantiek tussen met name BGT, BRT, BAG, en WOZ. Vanuit een beleidsoogpunt is het natuurlijk essentieel dat de informatie die aangeboden wordt juist is, goed aansluit en duidelijk is.
 
-Echter zou er voor bredere adoptie ook veel meer aandacht moeten zijn voor de voordelen die het biedt voor de afnemer wanneer deze met dezelfde technieken werkt. DiSGeo kan veel meer zijn dan een 'samenhangende objectenregistratie' in de zin van een nieuwe, grotere bak (silo) van geobasisgegevens die in samenhang zijn gebracht. De grote meerwaarde voor afnemers zit juist in de samenhang tussen die samenhangende objectenregistratie en de gegevens daaromheen, in registraties die sector-, domein of organisatiespecifiek zijn (bijvoorbeeld de beheergegevens van de provincie Noord Holland in een van onze voorbeelden). Dit kan zowel open als gesloten data zijn: juist de integratie met eigen, gesloten linked datasets biedt enorme voordelen voor organisaties die hun eigen data direct kunnen koppelen aan de samenhangende objectenregistratie. 
+Echter zou er voor bredere adoptie ook veel meer aandacht moeten zijn voor de voordelen die het biedt voor de afnemer wanneer deze met dezelfde technieken werkt. DiSGeo kan veel meer zijn dan een nieuwe, grotere bak (silo) van geobasisgegevens die in samenhang zijn gebracht. De grote meerwaarde voor afnemers zit juist in de samenhang tussen die samenhangende objectenregistratie en de gegevens daaromheen, in registraties die sector-, domein of organisatiespecifiek zijn (bijvoorbeeld de beheergegevens van de provincie Noord Holland in een van onze voorbeelden). Dit kan zowel open als gesloten data zijn: juist de integratie met eigen, gesloten linked datasets biedt enorme voordelen voor organisaties die hun eigen data direct kunnen koppelen aan de samenhangende objectenregistratie. 
 
 Binnen zowel het informatiemodel als de architectuur van DisGeo zou er dan ook aandacht zou moeten zijn voor de voordelen die het biedt voor afnemers van de data wanneer DisGeo data als linked data wordt gepubliceerd.
 
@@ -61,6 +61,12 @@ Binnen zowel het informatiemodel als de architectuur van DisGeo zou er dan ook a
 
 Er zijn tijdens de High 5 meerdere linksets gemaakt, bijvoorbeeld tussen scholen uit de Duo dataset en BAG verblijfsobjecten en tussen Rijksmonumenten uit de RCE dataset en kadastrale percelen. Dat is, bij een dataset van beperkte omvang, vrij eenvoudig te doen met behulp van een SPARQL query, als er hiervoor maar aanknopingspunten in de data zijn. Het eerste 'linksetje' verscheen al tijdens de eerste uurtjes van de High 5. 
 
+Tijdens de High 5 gemaakte linksets: 
+- Tussen BRK aliases (om verschillende URIs voor percelen te koppelen)
+- Tussen BRK percelen en RCE Rijksmonumenten
+- Tussen DUO onderwijsaanbieders en BAG verblijfsobjecten
+- Tussen NHR adresgegevens en BAG nummeraanduidingen
+
 Zulke linksets worden echter vaak eenmalig gemaakt op basis van een query. Terwijl de desbetreffende links, die relaties tussen objecten vastleggen, eigenlijk in de data zouden moeten zitten en beheerd worden. De data wijzigt immers voordurend. Bovendien zou de kwaliteit van belangrijke links, zeker links van en naar basisregistraties, de verantwoordelijkheid van een data eigenaar moeten zijn. Dit beheer en eigenaarschap is er echter meestal niet, want wie is verantwoordelijk voor de linkset? Wie beheert de links en betaalt daar dus ook voor? 
 
 Er zijn tegenwoordig al aardig wat als linked data gepubliceerde (overheids- geo-) datasets in Nederland. *Maar deze data is vrijwel nooit gelinkt aan andere datasets!* Het gaat in andere woorden veelal om vier sterren, geen vijf sterren linked data - de vijfde ster betreft namelijk het gelinkt zijn van de data. 
@@ -69,13 +75,7 @@ Er zijn maar enkele voorbeelden die we kennen van een beheerde linkset tussen ba
 
 De linkset tussen de BRT en de BAG is een goed voorbeeld van een koppeling tussen twee datasets waarvan het beheer tegenwoordig geregeld is. Als onderdeel van het werkproces rondom het actualiseren van BRT data wordt ook gekeken naar de BAG panden, met als resultaat relaties tussen BRT objecten en gerelateerde BAG panden. Deze links werden tot voor kort echter weer weggegooid; tegenwoordig wordt deze informatie doorgespeeld aan het Kadaster data science team dat de linkset tussen BRT en BAG publiceert en actueel houdt.
 
-Tijdens de High 5 gemaakte linksets: 
-- Tussen BRK aliases (om verschillende URIs voor percelen te koppelen)
-- Tussen BRK percelen en RCE Rijksmonumenten
-- Tussen DUO onderwijsaanbieders en BAG verblijfsobjecten
-- Tussen NHR adresgegevens en BAG nummeraanduidingen
-
-Bij de vorige DISGeo demontrator kwam dit punt ook al naar voren: zie de uitleg in [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). Het is noodzakelijk dat niet alleen de objecten uit basisregistraties (en ook andere registraties), maar ook de *links tussen objecten* (relaties) beheerd worden. Zoals een toeschouwer van de einddemo op de laatste dag van de High 5 opmerkte: Het moet voor de gebruiker duidelijk zijn met welke actualiteit hij/zij werkt. Dit geldt ook voor de relaties die er tussen objecten zijn gelegd, want deze zijn gevoelig voor verandering als objecten veranderen. In de high 5 liepen we niet expliciet tegen problemen met actualiteit aan, maar we nemen dit punt wel mee in ons verdere werk voor DiS Geo. 
+Bij de vorige DISGeo demonstrator kwam dit punt ook al naar voren: zie de uitleg in [governance op het snijvlak](https://docs.geostandaarden.nl/disgeo/dll/#governance-op-het-snijvlak). Het is noodzakelijk dat niet alleen de objecten uit basisregistraties (en ook andere registraties), maar ook de *links tussen objecten* (relaties) beheerd worden. Zoals een toeschouwer van de einddemo op de laatste dag van de High 5 opmerkte: Het moet voor de gebruiker duidelijk zijn met welke actualiteit hij/zij werkt. Dit geldt ook voor de relaties die er tussen objecten zijn gelegd, want deze zijn gevoelig voor verandering als objecten veranderen. In de High 5 liepen we niet expliciet tegen problemen met actualiteit aan, maar we nemen dit punt wel mee in ons verdere werk voor DiSGeo. 
 
 <aside class='advisement'>
 
@@ -96,15 +96,15 @@ Internationaal is er een gestandaardiseerd lijstje van linksoorten om te linken 
 
 Wat echter nog ontbreekt, is een gestandaardiseerde property waarmee partijen kunnen linken naar objecten in basisregistraties, op zo'n manier dat gebruikers kunnen zien dat het naar een basisgegeven linkt. Zo'n property zou gestandaardiseerd moeten worden in de DISGeo vocabulaire onder bijvoorbeeld de naam: `disgeo-object-ref` of `basisgegeven-ref`.
 
-We vragen ons nog wel af of zo'n generieke verwijzing voldoende is, of dat wilt kunnen zien naar wat voor soort object de link verwijst. Bijvoorbeeld: `disgeo-pand-ref`, `disgeo-kunstwerk-ref`. Overwegingen hierbij:
+We vragen ons nog wel af of zo'n generieke verwijzing voldoende is. Het zou toegevoegde waarde kunnen hebben om specifiekere verwijzingen te hebben, waaraan je kan zien naar wat voor soort object de link verwijst. Bijvoorbeeld: `disgeo-pand-ref`, `disgeo-kunstwerk-ref`. Overwegingen hierbij:
 - Meestal is een generieke link voldoende: je kunt achterhalen wat voor type object het is, door de link te volgen. 
-- In het geval dat een object linkt naar meerdere basisregistratie objecten, dan hebben specifiekere referenties meerwaarde, want je kunt dan aan de linknaam zien om wat voor objecten het gaat. Je hoeft ze dan niet op te halen om te zien om wat voor type objecten het gaat .
+- In het geval dat een object linkt naar meerdere basisregistratie objecten, dan hebben specifiekere referenties meerwaarde, want je kunt dan aan de linknaam zien om wat voor objecten het gaat. Je hoeft ze dan niet op te halen om te zien om wat voor type objecten het gaat.
 - Als zulke, specifiekere links er zijn kun je op basis daarvan ook kwaliteitscontroles uitvoeren.
 
 Er zijn ook andere standaarden die dit soort linknamen definiëren, bijvoorbeeld:
 - Het top level model van de nieuwe NTA 8035 definieert een aantal relaties zoals `heeftBegrenzing`.
 - De [building ontology](https://w3c-lbd-cg.github.io/bot/) definieert semantische relaties met geo-objecten, zoals `hasBuilding`. 
-- Semantic Sensor Network Ontology [[vocab-ssn]] standaardiseert de link van metingen naar het object waarvan een eigenschap gemeten wordt.
+- Semantic Sensor Network Ontology [[vocab-ssn]] standaardiseert de link van metingen naar het object waarvan een eigenschap gemeten wordt, `hasFeatureOfInterest`.
 
 Een gestandaardiseerde `disgeo-object-ref` staat niet in de weg van het gebruik van deze andere standaarden. Het is geen enkel probleem, sterker nog het verhoogt juist de interoperabiliteit, om in deze gevallen twee keer de link te leggen: één keer met behulp van de door DisGeo gestandaardiseerde link, en één keer met de link uit de andere standaard. 
 
@@ -114,7 +114,7 @@ Een gestandaardiseerde `disgeo-object-ref` staat niet in de weg van het gebruik 
   Naast de relatief semantisch zwakkere disgeo relaties is het alsnog mogelijk om:
   - als het object exact hetzelfde object is als in de basisregistratie,
     - direct gebruik te maken van de basisregistratie URI als onderwerp van eigen triples;
-    - gebruik te maken van owl:sameAs om de objecten gelijk te stellen.
+    - gebruik te maken van `owl:sameAs` om de objecten gelijk te stellen.
   - als het object niet exact hetzelfde is, maar wel gerelateerd, andere semantische relaties te gebruiken om de relatie tussen de objecten te beschrijven.
 </aside>
 
@@ -122,7 +122,7 @@ Een gestandaardiseerde `disgeo-object-ref` staat niet in de weg van het gebruik 
 
 **Overwegingen voor vervolg**
 
-Om vanuit andere dan basisregistraties een relatie naar een basisregistratie uit te drukken zou een gestandariseerde verwijzing veel duidelijkheid bieden. Dit helpt om duidelijk te maken dat de links binnen een dataset verwijzen naar 1 van de basisregistraties waardoor de samenhang beter zichtbaar wordt.
+Om vanuit andere dan basisregistraties een relatie naar een basisregistratie uit te drukken zou een gestandariseerde verwijzing veel duidelijkheid bieden. Dit helpt om duidelijk te maken dat de links binnen een dataset verwijzen naar één van de basisregistraties waardoor de samenhang beter zichtbaar wordt.
 
 Overweeg het opnemen van deze gestandaardiseerde relatie in het informatiemodel voor de samenhangende objectenregistratie, zodat deze beschikbaar is voor hergebruik.
 
@@ -151,7 +151,7 @@ Geo-objecten spelen vaak een rol in een netwerk, bijvoorbeeld rioolputten in een
 
 De beheerders van deze netwerken (bijvoorbeeld waterschappen, wegbeheerders) leggen doorgaans de fysieke- en beheerkenmerken van zulke objecten vast in een systeem, en het netwerk met haar knooppunten en verbindingen in een ander systeem. Bij het beantwoorden van vragen zoals in onze brandweer use cases, maar ook bijvoorbeeld in vele mobiliteits-use cases, zijn *beide* van belang en vooral ook *in samenhang met elkaar*. 
 
-Wij trekken hieruit de conclusie dat DISGeo de mogelijkheid moet bieden om netwerkmodellen op te nemen. Dit netwerkmodel is idealiter geharmoniseerd met de nieuwe NEN 2660, omdat deze standaard gevolgd zal worden in de systemen die gebruikt worden voor het beheer van de objecten. 
+Wij trekken hieruit de conclusie dat DiSGeo de mogelijkheid moet bieden om netwerkmodellen op te nemen. Dit netwerkmodel is idealiter geharmoniseerd met de nieuwe NEN 2660, omdat deze standaard gevolgd zal worden in de systemen die gebruikt worden voor het beheer van de objecten. 
 
 Het betekent ook dat er links gelegd moeten worden tussen de knooppunten en verbindingslijnen in het netwerk enerzijds, en de fysieke objecten die het netwerk realiseren in de fysieke werkelijkheid anderszijds. Bijvoorbeeld: een link tussen het BGT waterdeel dat een deel van een kanaal representeert en de corresponderende verbindingslijn in het waternetwerk.
 
@@ -166,7 +166,7 @@ Neem een algemeen netwerkmodel op in DisGeo; probeer dit te laten voldoen aan en
 </aside>
 
 ## Ruimtelijke vragen in linked data nu beter ondersteund
-GeoSPARQL [[geosparql]] is de standaard querytaal voor het ruimtelijk bevragen van linked geodata. Onze ervaringen tijdens deze high 5 lieten zien dat vergeleken met 2 á 3 jaar geleden  de ondersteuning voor GeoSPARQL enorm verbeterd is, zowel wat betreft compliance aan de standaard, als wat betreft performance. Er heeft een verschuiving plaatsgevonden van academische implementaties naar commerciële. 
+GeoSPARQL [[geosparql]] is de standaard querytaal voor het ruimtelijk bevragen van linked geodata. Onze ervaringen tijdens deze High 5 lieten zien dat vergeleken met 2 á 3 jaar geleden  de ondersteuning voor GeoSPARQL enorm verbeterd is, zowel wat betreft compliance aan de standaard, als wat betreft performance. Er heeft een verschuiving plaatsgevonden van academische implementaties naar commerciële. 
 
 De meeste triple stores die GeoSPARQL support hebben, bieden: 
 - Voor het uitdrukken van geometrie: WKT en vaak ook GML. 
@@ -216,7 +216,7 @@ Bij het gebruik van GeoSPARQL is er nog wel een technische beperking. Eén van d
 
 "Geef mij het BGT object Wegdeel met id 12345 en zoek ook even bij dit andere endpoint op wat er nog meer over dit wegdeel bekend is"
 
-Als je hierbij echter een geovraag wilt stellen (bijvoorbeeld: welke putten uit endpoint GWSW vallen binnen het polygoon van wegdeel Y uit endpoint BGT?) is dat nog maar zeer beperkt mogelijk. Tussen 2 endpoints van dezelfde vendor, bijvoorbeeld twee Virtuoso endpoints, werkt het mogelijk nog wel, maar tussen 2 endpoints van verschillende triple store producten niet. Hier laat de interoperabiliteit ons dus in de steek. Een mogelijke verklaring hiervoor is dat de endpoints alleen geovragen willen beantwoorden waarbij de objecten in de eigen ruimtelijke index staan.
+Als je hierbij echter een geovraag wilt stellen (bijvoorbeeld: welke putten uit endpoint GWSW vallen binnen het polygoon van wegdeel Y uit endpoint BGT?) is dat nog maar zeer beperkt mogelijk. Tussen twee endpoints van dezelfde vendor, bijvoorbeeld twee Virtuoso endpoints, werkt het mogelijk nog wel, maar tussen twee endpoints van verschillende triple store producten niet. Hier laat de interoperabiliteit ons dus in de steek. Een mogelijke verklaring hiervoor is dat de endpoints alleen geovragen willen beantwoorden waarbij de objecten in de eigen ruimtelijke index staan.
 
 Om te bewerkstelligen dat vendors dit mogelijk gaan maken, moet er in de GeoSPARQL standaard een aanbeveling komen over het ondersteunen van geovragen in federatieve queries. GeoSPARQL is ouder dan SPARQL 1.1, waarin federatie geregeld is.
 
@@ -226,7 +226,7 @@ In de demonstrator liepen we hier tegenaan bij de Castricum use case, en is dit 
 
 **Overwegingen voor vervolg**
 
-Het stellen van ruimtelijke vragen over verschillende Linked Data bronnen heen wordt nog niet goed ondersteund. Dit is iets wat in de standaarden opgelost moet worden aangezien hier niet eerder use cases voor waren. DiSGeo zou een mooie Use Case aan kunnen bieden hiervoor. Dit sluit aan bij de [eerdere aanbeveling](#ruimtelijke-vragen-in-linked-data-nu-beter-ondersteund) over het bijdragen aan ontwikkelingen in de relevante internationale standaarden.
+Het stellen van ruimtelijke vragen over verschillende Linked Data bronnen heen wordt nog niet goed ondersteund. Dit is iets wat in de standaarden opgelost moet worden aangezien hier niet eerder use cases voor waren. DiSGeo zou een mooie use case aan kunnen bieden hiervoor. Dit sluit aan bij de [eerdere aanbeveling](#ruimtelijke-vragen-in-linked-data-nu-beter-ondersteund) over het bijdragen aan ontwikkelingen in de relevante internationale standaarden.
 
 </aside>
 
@@ -235,7 +235,7 @@ Bij objecten die een adres hebben, of aan een BAG verblijfsobject gekoppeld zijn
 
 <aside class='example'>Tijdens de High 5 vonden we voor de Rotterdam use case een kinderdagverblijf vlak bij de locatie van ons fictieve incident. Althans... volgens het KvK vestigingsadres, waarvan ook Google ervan uitgaat dat dit de locatie van het kinderdagverblijf is. Echter, volgens de dataset van kinderdagverblijven bevindt dit kinderdagverblijf zich op een ander adres! Dit bleek het adres te zijn waar de bijbehorende stichting geregistreerd staat. Aan de link, met de naam <code>bagid</code>, is dit niet te zien. De kinderen bevinden zich dus daadwerkelijk op de locatie vlak bij de brand, maar als de brandweer was uitgegaan van de kinderdagverblijven dataset, hadden ze dit niet geweten. </aside>
 
-Onze aanbeveling is om in DISGeo goed vast te leggen wat er precies wordt bedoeld met adreskoppelingen of andere indirecte koppelingen met een locatie. Betekent dit dat het object zich daadwerkelijk op die locatie bevindt? Of is het niet meer dan een administratieve aanduiding? Ook objecten met een indirecte koppeling aan een locatie kunnen dan in ruimtelijke vragen gebruikt worden, terwijl objecten met een administratieve locatieaanduiding daarbij niet meegenomen worden.
+Onze aanbeveling is om in DISGeo goed vast te leggen wat er precies wordt bedoeld met adreskoppelingen of andere koppelingen met een locatie. Betekent dit dat het object zich daadwerkelijk op die locatie bevindt? Of is het niet meer dan een administratieve aanduiding? Ook objecten met een indirecte koppeling aan een locatie kunnen dan in ruimtelijke vragen gebruikt worden, terwijl objecten met een administratieve locatieaanduiding daarbij niet meegenomen worden.
 
 Bovendien zou het zinnige verrijking zijn om de daadwerkelijke locaties van objecten, waar dit van toepassing is, zo veel mogelijk op te nemen, naast eventuele administratieve aanduidingen zoals een postadres. Met een herkenbare link uiteraard. 
 
@@ -260,7 +260,7 @@ Het feit dat we linked data standaarden gebruikten, en dat willekeurig welke too
 
 **Overwegingen voor vervolg**
 
-De focus moet naast het verbeteren van de samenhang van basisregistraties ook liggen op de voordelen van het gebruik van open standaarden. De Linked Data aangeboden binnen DiSGeo kan met een grote verscheidenheid aan commerciële en open source tools gebruikt worden. Dit betekent dat organisaties die gebruik maken van de DiSGeo infrastructuur niet een specifieke tool of versie opgedrongen krijgen.
+De focus moet naast het verbeteren van de samenhang van basisregistraties ook liggen op de voordelen van het gebruik van open standaarden. De linked data aangeboden binnen DiSGeo kan met een grote verscheidenheid aan commerciële en open source tools gebruikt worden. Dit betekent dat organisaties die gebruik maken van de DiSGeo infrastructuur niet een specifieke tool of versie opgedrongen krijgen.
 
 Maak dit een uitgangspunt van zowel het informatiemodel voor de samenhangende objectregistratie, en van de DisGeo architectuur: baseer DisGeo op open standaarden zodat gebruikers hun eigen toolkeuze kunnen maken.
 
@@ -273,11 +273,7 @@ Door het op de juiste manier doorvoeren van de links, in de tijdens de High 5 ge
 
 Als een organisatie een interne, gesloten dataset gebruikt die volgens de standaarden refereert aan een basisregistratie is de koppeling direct bruikbaar waardoor de interne dataset direct verrijkt kan worden met gegevens uit de basisregistratie. Dit is te zien in de [Castricum use case](#brandweer-bluswater-case-castricum).
 
-Zoals genoemd in één van de lessons learned, [Uniforme referentie naar basisregistraties](#uniforme-referentie-naar-basisregistraties), kan de relatie met de basisregistratie ook dienen als kwaliteitscheck voor de interne data.
-
-<aside class='example'>Als een interne registratie gerelateerd is aan een verblijfsobject maar de link naar de basisregistratie wijst naar een pand is dat een indicatie van een data kwaliteits probleem.</aside>
-
-<aside class='note'>De samenhang op deze manier is voornamelijk bruikbaar voor het verkennen van informatie van enkele instanties, grootschalige analyse is niet zonder meer mogelijk.</aside>
+Zoals genoemd in één van de lessons learned, [Uniforme referentie naar basisregistraties](#uniforme-referentie-naar-basisregistraties), kan de relatie met de basisregistratie ook dienen als kwaliteitscheck voor de interne data. Als een interne registratie gerelateerd is aan een verblijfsobject maar de link naar de basisregistratie wijst naar een pand is dat een indicatie van een data kwaliteits probleem.
 
 <aside class='advisement'>
 
@@ -291,5 +287,3 @@ Stimuleer (of zelfs op termijn: verplicht) het leggen van betekenisvolle relatie
 
 ## Hoe nu verder
 Tenslotte plaatsen we bij het succes van deze High 5 de volgende kanttekening. De deelnemers aan deze vijf dagen waren, zoals één van hen zei, waren de 'crème de la crème' van de Nederlandse linked data community. We gingen uit van een te realiseren 'ideaalplaatje', dat we met behulp van linked data standaarden en tooling hebben weten te realiseren. Alles wat we bereikt hebben, is mede te danken aan de expertise die er deze week aan tafel zat. Dit laat zien dat de mogelijkheden bijna onbegrensd zijn, en dat met behulp van linked data de DISGeo ambities te realiseren zijn bij de huidige stand van de techniek, mits er voldoende kennis aanwezig is. 
-
-We zouden een soortgelijk experiment eigenlijk nog een keer moeten herhalen met ontwikkelaars die minder linked data kennis hebben. 

@@ -56,7 +56,7 @@ var respecConfig =
   format: "markdown",                 // altijd "markdown"     
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2020-05-14",  	      // Format is "YYY-MM-DD"
+  //publishDate: "2021-01-22",  	      // Format is "YYY-MM-DD"
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   editors: 
@@ -69,14 +69,33 @@ var respecConfig =
   ],
   //-- de namen van de Author(s) ------------------------------------------------------
   //-- vul in: per Author: name:, company:, companyURL: -------------------------------
-  //authors: 
-  //[
-  //  {
-  //     name:       "Gerard Trouborst",
-  //     company:    "Geonovum",
-  //     companyURL: "https://www.geonovum.nl"
-  //   }, 
-  //  ],
+  "authors": [
+    {
+      "name": "Bart van Leeuwen",
+      "company": "Netage",
+      "companyURL": "https://netage.nl/"
+    },
+    {
+      "name": "Erwin Folmer",
+      "company": "Kadaster",
+      "companyURL": "https://www.kadaster.nl"
+    },
+    {
+      "name": "Nicky van Oorschot",
+      "company": "Netage",
+      "companyURL": "https://netage.nl/"
+    },
+    {
+      "name": "Niels Hoffmann",
+      "company": "Provincie Noord-Holland",
+      "companyURL": "https://www.noord-holland.nl"
+    },
+    {
+      "name": "Pano Maria",
+      "company": "Skemu",
+      "companyURL": "https://skemu.com"
+    }
+  ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "dll2", 	            // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
@@ -135,8 +154,8 @@ var respecConfig =
   },
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  //previousPublishDate: "2020-05-14",    	    // Format is "YYYY-MM-DD"
-  //previousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
+  previousPublishDate: "2021-01-07",    	    // Format is "YYYY-MM-DD"
+  previousMaturity: "GN-DEF",                 // kies 1 van deze 3 regels
   //previousMaturity: "CV",                   // kies 1 van deze 3 regels  	  
   //previousMaturity: "VV",  	                // kies 1 van deze 3 regels
 

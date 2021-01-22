@@ -41,7 +41,7 @@ De andere grote vraag is waar het gebruikte bluswater naar toe gaat. Meestal gaa
 Deze use case demonstreert het koppelen van eigen, gesloten data aan basisregistratie data. In dit geval zijn dit de beheer openbare ruimte (BOR) objecten, ook wel areaaldata, van de Provincie Noord-Holland, die via een link verbonden zijn aan de corresponderende BGT objecten, en via de BGT uiteindelijk te relateren zijn aan de GWSW rioolnetwerkdata. In de [data story](https://labs.kadaster.nl/stories/high5-imbor/) is vooral de vraag "*waar stroomt het gebruikte bluswater naar toe*" uitgewerkt.
 
 <figure>
-    <img src="media/sor-aanvullend-bor.png" alt="overzicht databronnen"/>
+    <img src="media/sor-aanvullend-story.png" alt="overzicht databronnen"/>
     <figcaption>Overzicht van de betrokken databronnen</figcaption>
 </figure>
 

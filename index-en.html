@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <!-- HTML-Header ------------------------------------------------------------------------------>
+    <head>
+        <meta charset='utf-8'>
+        <title>DisGeo Demo II Lessons Learned</title>
+        <link rel="stylesheet" type="text/css" href="./media/style.css">
+        <link rel='shortcut icon' type='image/x-icon' href='https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico' />
+        <script class="remove" src="./config.js"></script>
+        <script class='remove' src='https://tools.geostandaarden.nl/respec/builds/respec-geonovum.js' async></script>
+    </head>
+    <!-- HTML-Body -------------------------------------------------------------------------------->
+    <body>
+        <section id='abstract'>
+            <p> This document describes the lessons learned while developing a demonstrator for DisGeo in 5 days. The DisGeo Demo phase 2 shows what Linked Data can mean for DisGeo, and what the shortcomings are. The emphasis is on integral usage questions across datasets, based on coherence between datasets. </p>
+            <p> The main conclusions are: </p>
+            <ul>
+              <li> Linked data is indispensable in realizing the DisGeo ambition to use data in conjunction. </li>
+              <li> Linked data is ready. There are no longer any major technical obstacles. Support in the geographic linked data market is good. </li>
+              <li> Linked data can serve as a direct access layer for users, and can also be the basis for APIs and viewers. This allows different user groups to be served from one source. </li>
+            </ul>
+            <p> Many of the datasets that we use in the demonstrator are published on the basis of linked data standards, but do not contain links to other data, not even to existing key registers. When the links between individual objects from different registrations do exist, working with the data becomes much easier. Supported by the technology of linked data, coherence really works, also between official government registrations and private supplementary registrations. Linked data does not mean per s? linked OPEN data; and closed and open linked data can be linked to each other, whereby authentication and authorization of the closed data with standard web techniques are simple and well arranged. The technology is ready for it; From an organizational point of view, there is still something to be done: establishing links between objects requires governance at the interface, i.e. a responsible party who not only manages the objects but also the links between them. </p>
+            <p> Software for storing and querying linked data appeared to have good support for geographic linked data. This was not the case a few years ago, but in the meantime a professionalization has taken place in this type of software. We also see the same in other linked data tooling: there is good tooling available for editing, browsing, etc. and this tooling works completely interoperable. This is an important observation, because while data standards have always promised to achieve interoperability, it has never been fully delivered in practice. In this case, yes. Given the good support in the market, we can say that linked data is ready to be used in serious projects with geographic data. </p> 
+        </section>
+        <section id='sotd'><p></p></section>
+        <section data-format="markdown" data-include="docs/intro.md"></section>
+
+        <section data-format="markdown" data-include="docs/usecases.md"></section>
+
+        <section data-format="markdown" data-include="docs/data.md"></section>
+        
+        <section data-format="markdown" data-include="docs/tools.md"></section>
+
+        <section data-format="markdown" data-include="docs/lessonslearned.md"></section>
+
+        <!--<section id='B00' data-format="markdown" data-include="begrippen/Bijlagen.md" class="appendix"></section>-->
+    </body>
+</html>
